@@ -1,0 +1,566 @@
+"DataType","WorkflowType","Group","Key","Value"
+"Questions","ProgrammingEnvironment","What computer language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","What computer language","Threshold",0.56
+"Questions","ProgrammingEnvironment","What computer language","Parameter","lang"
+"Questions","ProgrammingEnvironment","What computer language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","What language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","What language","Threshold",0.56
+"Questions","ProgrammingEnvironment","What language","Parameter","lang"
+"Questions","ProgrammingEnvironment","What language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","What packages","TypePattern","_String"
+"Questions","ProgrammingEnvironment","What packages","Threshold",0.56
+"Questions","ProgrammingEnvironment","What packages","Parameter","packages"
+"Questions","ProgrammingEnvironment","What packages","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","What packages to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","What packages to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","What packages to use","Parameter","packages"
+"Questions","ProgrammingEnvironment","What packages to use","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","What programming language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","What programming language","Threshold",0.56
+"Questions","ProgrammingEnvironment","What programming language","Parameter","lang"
+"Questions","ProgrammingEnvironment","What programming language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which computer language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which computer language","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which computer language","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which computer language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which computer language to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which computer language to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which computer language to use","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which computer language to use","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which language","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which language","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which language to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which language to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which language to use","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which language to use","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which libraries","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which libraries","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which libraries","Parameter","packages"
+"Questions","ProgrammingEnvironment","Which libraries","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","Which libraries to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which libraries to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which libraries to use","Parameter","packages"
+"Questions","ProgrammingEnvironment","Which libraries to use","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","Which packages","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which packages","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which packages","Parameter","packages"
+"Questions","ProgrammingEnvironment","Which packages","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","Which packages to load","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which packages to load","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which packages to load","Parameter","packages"
+"Questions","ProgrammingEnvironment","Which packages to load","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","Which packages to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which packages to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which packages to use","Parameter","packages"
+"Questions","ProgrammingEnvironment","Which packages to use","ContextWordsToRemove","{""library"", ""libraries"", ""package"", ""packages""}"
+"Questions","ProgrammingEnvironment","Which programming language","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which programming language","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which programming language","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which programming language","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","ProgrammingEnvironment","Which programming language to use","TypePattern","_String"
+"Questions","ProgrammingEnvironment","Which programming language to use","Threshold",0.56
+"Questions","ProgrammingEnvironment","Which programming language to use","Parameter","lang"
+"Questions","ProgrammingEnvironment","Which programming language to use","ContextWordsToRemove","{""code"", ""language"", ""programming""}"
+"Questions","QuantileRegression","How many knots","TypePattern","_Integer"
+"Questions","QuantileRegression","How many knots","Threshold",0.6
+"Questions","QuantileRegression","How many knots","Parameter","knots"
+"Questions","QuantileRegression","How many knots","ContextWordsToRemove","{""knots""}"
+"Questions","QuantileRegression","What is the interpolation order","TypePattern","_Integer"
+"Questions","QuantileRegression","What is the interpolation order","Threshold",0.75
+"Questions","QuantileRegression","What is the interpolation order","Parameter","intOrder"
+"Questions","QuantileRegression","Data summary","TypePattern","_?BooleanQ"
+"Questions","QuantileRegression","Data summary","Threshold",0.75
+"Questions","QuantileRegression","Data summary","Parameter","dataSummaryQ"
+"Questions","QuantileRegression","Which axes to rescale","TypePattern","{_String..}"
+"Questions","QuantileRegression","Which axes to rescale","Threshold",0.75
+"Questions","QuantileRegression","Which axes to rescale","Parameter","{""rescaleTimeAxisQ"", ""rescaleValueAxisQ""}"
+"Questions","QuantileRegression","What kind of plot","TypePattern","_?BooleanQ"
+"Questions","QuantileRegression","What kind of plot","Threshold",0.75
+"Questions","QuantileRegression","What kind of plot","Parameter","dateListPlotQ"
+"Questions","QuantileRegression","What kind of plot","TrueValues","{""true"", ""yes"", ""datelist"", ""date list"", ""datelist plot"", ""use date list plot""}"
+"Questions","QuantileRegression","Date list plot","TypePattern","_?BooleanQ"
+"Questions","QuantileRegression","Date list plot","Threshold",0.75
+"Questions","QuantileRegression","Date list plot","Parameter","dateListPlotQ"
+"Questions","QuantileRegression","Date list plot","TrueValues","{""true"", ""yes"", ""datelist"", ""date list"", ""datelist plot"", ""use date list plot""}"
+"Questions","QuantileRegression","Relative errors plot","TypePattern","_?BooleanQ"
+"Questions","QuantileRegression","Relative errors plot","Threshold",0.75
+"Questions","QuantileRegression","Relative errors plot","Parameter","relativeErrorsQ"
+"Questions","QuantileRegression","Absolute errors plot","TypePattern","_?BooleanQ"
+"Questions","QuantileRegression","Absolute errors plot","Threshold",0.75
+"Questions","QuantileRegression","Absolute errors plot","Parameter","absoluteErrorsQ"
+"Questions","QuantileRegression","Which dataset to use","TypePattern","_String"
+"Questions","QuantileRegression","Which dataset to use","Threshold",0.4
+"Questions","QuantileRegression","Which dataset to use","Parameter","dataset"
+"Questions","QuantileRegression","Which dataset to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QuantileRegression","Which data to use","TypePattern","_String"
+"Questions","QuantileRegression","Which data to use","Threshold",0.4
+"Questions","QuantileRegression","Which data to use","Parameter","dataset"
+"Questions","QuantileRegression","Which data to use","ContextWordsToRemove","{""data"", ""dataset""}"
+"Questions","QuantileRegression","Which time series to use","TypePattern","_String"
+"Questions","QuantileRegression","Which time series to use","Threshold",0.4
+"Questions","QuantileRegression","Which time series to use","Parameter","dataset"
+"Questions","QuantileRegression","Which time series to use","ContextWordsToRemove","{""time series""}"
+"Questions","QuantileRegression","Over which","TypePattern","_String"
+"Questions","QuantileRegression","Over which","Threshold",0.35
+"Questions","QuantileRegression","Over which","Parameter","dataset"
+"Questions","QuantileRegression","Over which","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QuantileRegression","Over what","TypePattern","_String"
+"Questions","QuantileRegression","Over what","Threshold",0.35
+"Questions","QuantileRegression","Over what","Parameter","dataset"
+"Questions","QuantileRegression","Over what","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QuantileRegression","Which probabilities","TypePattern","{_?NumericQ..}"
+"Questions","QuantileRegression","Which probabilities","Threshold",0.7
+"Questions","QuantileRegression","Which probabilities","Parameter","probs"
+"Questions","QuantileRegression","Which probabilities","ContextWordsToRemove","{""probabilities""}"
+"Questions","QuantileRegression","Which regression quantiles","TypePattern","{_?NumericQ..}"
+"Questions","QuantileRegression","Which regression quantiles","Threshold",0.6
+"Questions","QuantileRegression","Which regression quantiles","Parameter","probs"
+"Questions","QuantileRegression","Which regression quantiles","ContextWordsToRemove","{""regression quantiles""}"
+"Questions","LatentSemanticAnalysis","Apply stemming","TypePattern","_?BooleanQ"
+"Questions","LatentSemanticAnalysis","Apply stemming","Threshold",0.75
+"Questions","LatentSemanticAnalysis","Apply stemming","Parameter","stemmingRules"
+"Questions","LatentSemanticAnalysis","How many topics","TypePattern","_Integer"
+"Questions","LatentSemanticAnalysis","How many topics","Threshold",0.45
+"Questions","LatentSemanticAnalysis","How many topics","Parameter","numberOfTopics"
+"Questions","LatentSemanticAnalysis","How many topics","ContextWordsToRemove","{""topics""}"
+"Questions","LatentSemanticAnalysis","How many topics to extract","TypePattern","_Integer"
+"Questions","LatentSemanticAnalysis","How many topics to extract","Threshold",0.45
+"Questions","LatentSemanticAnalysis","How many topics to extract","Parameter","numberOfTopics"
+"Questions","LatentSemanticAnalysis","How many topics to extract","ContextWordsToRemove","{""topics""}"
+"Questions","LatentSemanticAnalysis","Which method","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which method","Threshold",0.5
+"Questions","LatentSemanticAnalysis","Which method","Parameter","method"
+"Questions","LatentSemanticAnalysis","Which method","ContextWordsToRemove","{""method"", ""algorithm""}"
+"Questions","LatentSemanticAnalysis","Which dimension reduction method","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which dimension reduction method","Threshold",0.5
+"Questions","LatentSemanticAnalysis","Which dimension reduction method","Parameter","method"
+"Questions","LatentSemanticAnalysis","Which dimension reduction method","ContextWordsToRemove","{""method"", ""algorithm""}"
+"Questions","LatentSemanticAnalysis","Which topic extraction method","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which topic extraction method","Threshold",0.5
+"Questions","LatentSemanticAnalysis","Which topic extraction method","Parameter","method"
+"Questions","LatentSemanticAnalysis","Which topic extraction method","ContextWordsToRemove","{""method"", ""algorithm""}"
+"Questions","LatentSemanticAnalysis","Show topics table","TypePattern","_?BooleanQ"
+"Questions","LatentSemanticAnalysis","Show topics table","Threshold",0.75
+"Questions","LatentSemanticAnalysis","Show topics table","Parameter","showTopicsTableQ"
+"Questions","LatentSemanticAnalysis","Number of terms in the topics table","TypePattern","_?BooleanQ"
+"Questions","LatentSemanticAnalysis","Number of terms in the topics table","Threshold",0.75
+"Questions","LatentSemanticAnalysis","Number of terms in the topics table","Parameter","topicsTableNumberOfTerms"
+"Questions","LatentSemanticAnalysis","Which words to use for statistical thesaurus","TypePattern","{_String..}"
+"Questions","LatentSemanticAnalysis","Which words to use for statistical thesaurus","Threshold",0.15
+"Questions","LatentSemanticAnalysis","Which words to use for statistical thesaurus","Parameter","statThesaurusWords"
+"Questions","LatentSemanticAnalysis","Thesaurus words","TypePattern","{_String..}"
+"Questions","LatentSemanticAnalysis","Thesaurus words","Threshold",0.15
+"Questions","LatentSemanticAnalysis","Thesaurus words","Parameter","statThesaurusWords"
+"Questions","LatentSemanticAnalysis","Thesaurus words to show","TypePattern","{_String..}"
+"Questions","LatentSemanticAnalysis","Thesaurus words to show","Threshold",0.15
+"Questions","LatentSemanticAnalysis","Thesaurus words to show","Parameter","statThesaurusWords"
+"Questions","LatentSemanticAnalysis","Statistical thesaurus words","TypePattern","{_String..}"
+"Questions","LatentSemanticAnalysis","Statistical thesaurus words","Threshold",0.75
+"Questions","LatentSemanticAnalysis","Statistical thesaurus words","Parameter","statThesaurusWords"
+"Questions","LatentSemanticAnalysis","Which dataset to use","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which dataset to use","Threshold",0.35
+"Questions","LatentSemanticAnalysis","Which dataset to use","Parameter","textData"
+"Questions","LatentSemanticAnalysis","Which text corpus","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which text corpus","Threshold",0.35
+"Questions","LatentSemanticAnalysis","Which text corpus","Parameter","textData"
+"Questions","LatentSemanticAnalysis","Which collection of texts","TypePattern","_String"
+"Questions","LatentSemanticAnalysis","Which collection of texts","Threshold",0.35
+"Questions","LatentSemanticAnalysis","Which collection of texts","Parameter","textData"
+"Questions","Classification","Which dataset to use","TypePattern","_String"
+"Questions","Classification","Which dataset to use","Threshold",0.35
+"Questions","Classification","Which dataset to use","Parameter","data"
+"Questions","Classification","Which dataset to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","Which data","TypePattern","_String"
+"Questions","Classification","Which data","Threshold",0.35
+"Questions","Classification","Which data","Parameter","data"
+"Questions","Classification","Which data","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","Which data to use","TypePattern","_String"
+"Questions","Classification","Which data to use","Threshold",0.35
+"Questions","Classification","Which data to use","Parameter","data"
+"Questions","Classification","Which data to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","For which data","TypePattern","_String"
+"Questions","Classification","For which data","Threshold",0.35
+"Questions","Classification","For which data","Parameter","data"
+"Questions","Classification","For which data","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","For which dataset","TypePattern","_String"
+"Questions","Classification","For which dataset","Threshold",0.35
+"Questions","Classification","For which dataset","Parameter","data"
+"Questions","Classification","For which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","Using which dataset","TypePattern","_String"
+"Questions","Classification","Using which dataset","Threshold",0.35
+"Questions","Classification","Using which dataset","Parameter","data"
+"Questions","Classification","Using which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","Over which dataset","TypePattern","_String"
+"Questions","Classification","Over which dataset","Threshold",0.35
+"Questions","Classification","Over which dataset","Parameter","data"
+"Questions","Classification","Over which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","Classification","What is the split ratio","TypePattern","_?NumericQ"
+"Questions","Classification","What is the split ratio","Threshold",0.75
+"Questions","Classification","What is the split ratio","Parameter","splitRatio"
+"Questions","Classification","Which split ratio to use","TypePattern","_?NumericQ"
+"Questions","Classification","Which split ratio to use","Threshold",0.75
+"Questions","Classification","Which split ratio to use","Parameter","splitRatio"
+"Questions","Classification","Training vs testing data  ratio","TypePattern","_?NumericQ"
+"Questions","Classification","Training vs testing data  ratio","Threshold",0.75
+"Questions","Classification","Training vs testing data  ratio","Parameter","splitRatio"
+"Questions","Classification","Which classifier method","TypePattern","_String"
+"Questions","Classification","Which classifier method","Threshold",0.66
+"Questions","Classification","Which classifier method","Parameter","method"
+"Questions","Classification","What kind of classifier","TypePattern","_String"
+"Questions","Classification","What kind of classifier","Threshold",0.66
+"Questions","Classification","What kind of classifier","Parameter","method"
+"Questions","Classification","How to classify","TypePattern","_String"
+"Questions","Classification","How to classify","Threshold",0.66
+"Questions","Classification","How to classify","Parameter","method"
+"Questions","Classification","Which classifier algorithm","TypePattern","_String"
+"Questions","Classification","Which classifier algorithm","Threshold",0.66
+"Questions","Classification","Which classifier algorithm","Parameter","method"
+"Questions","Classification","Classifier measurements","TypePattern","{_String..}"
+"Questions","Classification","Classifier measurements","Threshold",0.35
+"Questions","Classification","Classifier measurements","Parameter","measurementFuncs"
+"Questions","Classification","Classifier measurements","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","Classification","Which evaluation metrics","TypePattern","{_String..}"
+"Questions","Classification","Which evaluation metrics","Threshold",0.35
+"Questions","Classification","Which evaluation metrics","Parameter","measurementFuncs"
+"Questions","Classification","Which evaluation metrics","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","Classification","Which measurements","TypePattern","{_String..}"
+"Questions","Classification","Which measurements","Threshold",0.35
+"Questions","Classification","Which measurements","Parameter","measurementFuncs"
+"Questions","Classification","Which measurements","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","Classification","Which ROC functions","TypePattern","{_String..}"
+"Questions","Classification","Which ROC functions","Threshold",0.35
+"Questions","Classification","Which ROC functions","Parameter","rocPlotFuncs"
+"Questions","Classification","Which ROC plot functions","TypePattern","{_String..}"
+"Questions","Classification","Which ROC plot functions","Threshold",0.35
+"Questions","Classification","Which ROC plot functions","Parameter","rocPlotFuncs"
+"Questions","RandomTabularDataset","How many rows","TypePattern","_Integer"
+"Questions","RandomTabularDataset","How many rows","Threshold",0.5
+"Questions","RandomTabularDataset","How many rows","Parameter","nrow"
+"Questions","RandomTabularDataset","What number of rows","TypePattern","_Integer"
+"Questions","RandomTabularDataset","What number of rows","Threshold",0.5
+"Questions","RandomTabularDataset","What number of rows","Parameter","nrow"
+"Questions","RandomTabularDataset","Rows count","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Rows count","Threshold",0.5
+"Questions","RandomTabularDataset","Rows count","Parameter","nrow"
+"Questions","RandomTabularDataset","How many columns","TypePattern","_Integer"
+"Questions","RandomTabularDataset","How many columns","Threshold",0.5
+"Questions","RandomTabularDataset","How many columns","Parameter","ncol"
+"Questions","RandomTabularDataset","What number of columns","TypePattern","_Integer"
+"Questions","RandomTabularDataset","What number of columns","Threshold",0.5
+"Questions","RandomTabularDataset","What number of columns","Parameter","ncol"
+"Questions","RandomTabularDataset","Columns count","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Columns count","Threshold",0.5
+"Questions","RandomTabularDataset","Columns count","Parameter","ncol"
+"Questions","RandomTabularDataset","Max number values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Max number values","Threshold",0.5
+"Questions","RandomTabularDataset","Max number values","Parameter","maxNumberOfValues"
+"Questions","RandomTabularDataset","Maximum number of values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Maximum number of values","Threshold",0.5
+"Questions","RandomTabularDataset","Maximum number of values","Parameter","maxNumberOfValues"
+"Questions","RandomTabularDataset","Number of values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Number of values","Threshold",0.5
+"Questions","RandomTabularDataset","Number of values","Parameter","maxNumberOfValues"
+"Questions","RandomTabularDataset","At most how many of values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","At most how many of values","Threshold",0.5
+"Questions","RandomTabularDataset","At most how many of values","Parameter","maxNumberOfValues"
+"Questions","RandomTabularDataset","Min number values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Min number values","Threshold",0.5
+"Questions","RandomTabularDataset","Min number values","Parameter","minNumberOfValues"
+"Questions","RandomTabularDataset","Minimum number of values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Minimum number of values","Threshold",0.5
+"Questions","RandomTabularDataset","Minimum number of values","Parameter","minNumberOfValues"
+"Questions","RandomTabularDataset","At least how many of values","TypePattern","_Integer"
+"Questions","RandomTabularDataset","At least how many of values","Threshold",0.5
+"Questions","RandomTabularDataset","At least how many of values","Parameter","minNumberOfValues"
+"Questions","RandomTabularDataset","Which form","TypePattern","_String"
+"Questions","RandomTabularDataset","Which form","Threshold",0.5
+"Questions","RandomTabularDataset","Which form","Parameter","form"
+"Questions","RandomTabularDataset","Which format","TypePattern","_String"
+"Questions","RandomTabularDataset","Which format","Threshold",0.5
+"Questions","RandomTabularDataset","Which format","Parameter","form"
+"Questions","RandomTabularDataset","What kind of form","TypePattern","_String"
+"Questions","RandomTabularDataset","What kind of form","Threshold",0.5
+"Questions","RandomTabularDataset","What kind of form","Parameter","form"
+"Questions","RandomTabularDataset","What kind of format","TypePattern","_String"
+"Questions","RandomTabularDataset","What kind of format","Threshold",0.5
+"Questions","RandomTabularDataset","What kind of format","Parameter","form"
+"Questions","RandomTabularDataset","What is the column name generator","TypePattern","_Integer"
+"Questions","RandomTabularDataset","What is the column name generator","Threshold",0.5
+"Questions","RandomTabularDataset","What is the column name generator","Parameter","columnNamesGenerator"
+"Questions","RandomTabularDataset","Which is the column name generator","TypePattern","_Integer"
+"Questions","RandomTabularDataset","Which is the column name generator","Threshold",0.5
+"Questions","RandomTabularDataset","Which is the column name generator","Parameter","columnNamesGenerator"
+"Questions","RandomTabularDataset","How to generate the column names","TypePattern","_Integer"
+"Questions","RandomTabularDataset","How to generate the column names","Threshold",0.5
+"Questions","RandomTabularDataset","How to generate the column names","Parameter","columnNamesGenerator"
+"Questions","RandomTabularDataset","What are the value generators","TypePattern","{_String..}"
+"Questions","RandomTabularDataset","What are the value generators","Threshold",0.5
+"Questions","RandomTabularDataset","What are the value generators","Parameter","generators"
+"Questions","RandomTabularDataset","What are the generators","TypePattern","{_String..}"
+"Questions","RandomTabularDataset","What are the generators","Threshold",0.5
+"Questions","RandomTabularDataset","What are the generators","Parameter","generators"
+"Questions","RandomTabularDataset","Which value generators","TypePattern","{_String..}"
+"Questions","RandomTabularDataset","Which value generators","Threshold",0.5
+"Questions","RandomTabularDataset","Which value generators","Parameter","generators"
+"Questions","RandomTabularDataset","Which generators","TypePattern","{_String..}"
+"Questions","RandomTabularDataset","Which generators","Threshold",0.5
+"Questions","RandomTabularDataset","Which generators","Parameter","generators"
+"Questions","Recommendations","Which dataset to use","TypePattern","_String"
+"Questions","Recommendations","Which dataset to use","Threshold",0.35
+"Questions","Recommendations","Which dataset to use","Parameter","dataset"
+"Questions","Recommendations","Which data","TypePattern","_String"
+"Questions","Recommendations","Which data","Threshold",0.35
+"Questions","Recommendations","Which data","Parameter","dataset"
+"Questions","Recommendations","Which data to use","TypePattern","_String"
+"Questions","Recommendations","Which data to use","Threshold",0.35
+"Questions","Recommendations","Which data to use","Parameter","dataset"
+"Questions","Recommendations","Over which data","TypePattern","_String"
+"Questions","Recommendations","Over which data","Threshold",0.35
+"Questions","Recommendations","Over which data","Parameter","dataset"
+"Questions","Recommendations","Over which dataset","TypePattern","_String"
+"Questions","Recommendations","Over which dataset","Threshold",0.35
+"Questions","Recommendations","Over which dataset","Parameter","dataset"
+"Questions","Recommendations","Which profile to use","TypePattern","{_String..}"
+"Questions","Recommendations","Which profile to use","Threshold",0.35
+"Questions","Recommendations","Which profile to use","Parameter","prof"
+"Questions","Recommendations","Which profile","TypePattern","{_String..}"
+"Questions","Recommendations","Which profile","Threshold",0.35
+"Questions","Recommendations","Which profile","Parameter","prof"
+"Questions","Recommendations","What is the profile","TypePattern","{_String..}"
+"Questions","Recommendations","What is the profile","Threshold",0.35
+"Questions","Recommendations","What is the profile","Parameter","data"
+"Questions","Recommendations","How many recommendations","TypePattern","_Integer"
+"Questions","Recommendations","How many recommendations","Threshold",0.35
+"Questions","Recommendations","How many recommendations","Parameter","nrecs"
+"Questions","Recommendations","What number of top recommendations","TypePattern","_Integer"
+"Questions","Recommendations","What number of top recommendations","Threshold",0.35
+"Questions","Recommendations","What number of top recommendations","Parameter","nrecs"
+"Questions","Recommendations","How many results","TypePattern","_Integer"
+"Questions","Recommendations","How many results","Threshold",0.35
+"Questions","Recommendations","How many results","Parameter","nrecs"
+"Questions","Recommendations","What number of top results","TypePattern","_Integer"
+"Questions","Recommendations","What number of top results","Threshold",0.35
+"Questions","Recommendations","What number of top results","Parameter","nrecs"
+"Questions","ClCon","Which dataset to use","TypePattern","_String"
+"Questions","ClCon","Which dataset to use","Threshold",0.35
+"Questions","ClCon","Which dataset to use","Parameter","data"
+"Questions","ClCon","Which dataset to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","Which data","TypePattern","_String"
+"Questions","ClCon","Which data","Threshold",0.35
+"Questions","ClCon","Which data","Parameter","data"
+"Questions","ClCon","Which data","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","Which data to use","TypePattern","_String"
+"Questions","ClCon","Which data to use","Threshold",0.35
+"Questions","ClCon","Which data to use","Parameter","data"
+"Questions","ClCon","Which data to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","For which data","TypePattern","_String"
+"Questions","ClCon","For which data","Threshold",0.35
+"Questions","ClCon","For which data","Parameter","data"
+"Questions","ClCon","For which data","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","For which dataset","TypePattern","_String"
+"Questions","ClCon","For which dataset","Threshold",0.35
+"Questions","ClCon","For which dataset","Parameter","data"
+"Questions","ClCon","For which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","Using which dataset","TypePattern","_String"
+"Questions","ClCon","Using which dataset","Threshold",0.35
+"Questions","ClCon","Using which dataset","Parameter","data"
+"Questions","ClCon","Using which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","Over which dataset","TypePattern","_String"
+"Questions","ClCon","Over which dataset","Threshold",0.35
+"Questions","ClCon","Over which dataset","Parameter","data"
+"Questions","ClCon","Over which dataset","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","ClCon","What is the split ratio","TypePattern","_?NumericQ"
+"Questions","ClCon","What is the split ratio","Threshold",0.75
+"Questions","ClCon","What is the split ratio","Parameter","splitRatio"
+"Questions","ClCon","Which split ratio to use","TypePattern","_?NumericQ"
+"Questions","ClCon","Which split ratio to use","Threshold",0.75
+"Questions","ClCon","Which split ratio to use","Parameter","splitRatio"
+"Questions","ClCon","Training vs testing data  ratio","TypePattern","_?NumericQ"
+"Questions","ClCon","Training vs testing data  ratio","Threshold",0.75
+"Questions","ClCon","Training vs testing data  ratio","Parameter","splitRatio"
+"Questions","ClCon","Which classifier method","TypePattern","_String"
+"Questions","ClCon","Which classifier method","Threshold",0.66
+"Questions","ClCon","Which classifier method","Parameter","method"
+"Questions","ClCon","What kind of classifier","TypePattern","_String"
+"Questions","ClCon","What kind of classifier","Threshold",0.66
+"Questions","ClCon","What kind of classifier","Parameter","method"
+"Questions","ClCon","How to classify","TypePattern","_String"
+"Questions","ClCon","How to classify","Threshold",0.66
+"Questions","ClCon","How to classify","Parameter","method"
+"Questions","ClCon","Which classifier algorithm","TypePattern","_String"
+"Questions","ClCon","Which classifier algorithm","Threshold",0.66
+"Questions","ClCon","Which classifier algorithm","Parameter","method"
+"Questions","ClCon","Classifier measurements","TypePattern","{_String..}"
+"Questions","ClCon","Classifier measurements","Threshold",0.35
+"Questions","ClCon","Classifier measurements","Parameter","measurementFuncs"
+"Questions","ClCon","Classifier measurements","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","ClCon","Which evaluation metrics","TypePattern","{_String..}"
+"Questions","ClCon","Which evaluation metrics","Threshold",0.35
+"Questions","ClCon","Which evaluation metrics","Parameter","measurementFuncs"
+"Questions","ClCon","Which evaluation metrics","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","ClCon","Which measurements","TypePattern","{_String..}"
+"Questions","ClCon","Which measurements","Threshold",0.35
+"Questions","ClCon","Which measurements","Parameter","measurementFuncs"
+"Questions","ClCon","Which measurements","ContextWordsToRemove","{""measurements"", ""ROC functions"", ""classifier""}"
+"Questions","ClCon","Which ROC functions","TypePattern","{_String..}"
+"Questions","ClCon","Which ROC functions","Threshold",0.35
+"Questions","ClCon","Which ROC functions","Parameter","rocPlotFuncs"
+"Questions","ClCon","Which ROC plot functions","TypePattern","{_String..}"
+"Questions","ClCon","Which ROC plot functions","Threshold",0.35
+"Questions","ClCon","Which ROC plot functions","Parameter","rocPlotFuncs"
+"Questions","QRMon","How many knots","TypePattern","_Integer"
+"Questions","QRMon","How many knots","Threshold",0.6
+"Questions","QRMon","How many knots","Parameter","knots"
+"Questions","QRMon","How many knots","ContextWordsToRemove","{""knots""}"
+"Questions","QRMon","What is the interpolation order","TypePattern","_Integer"
+"Questions","QRMon","What is the interpolation order","Threshold",0.75
+"Questions","QRMon","What is the interpolation order","Parameter","intOrder"
+"Questions","QRMon","Data summary","TypePattern","_?BooleanQ"
+"Questions","QRMon","Data summary","Threshold",0.75
+"Questions","QRMon","Data summary","Parameter","dataSummaryQ"
+"Questions","QRMon","Which axes to rescale","TypePattern","{_String..}"
+"Questions","QRMon","Which axes to rescale","Threshold",0.75
+"Questions","QRMon","Which axes to rescale","Parameter","{""rescaleTimeAxisQ"", ""rescaleValueAxisQ""}"
+"Questions","QRMon","What kind of plot","TypePattern","_?BooleanQ"
+"Questions","QRMon","What kind of plot","Threshold",0.75
+"Questions","QRMon","What kind of plot","Parameter","dateListPlotQ"
+"Questions","QRMon","What kind of plot","TrueValues","{""true"", ""yes"", ""datelist"", ""date list"", ""datelist plot"", ""use date list plot""}"
+"Questions","QRMon","Date list plot","TypePattern","_?BooleanQ"
+"Questions","QRMon","Date list plot","Threshold",0.75
+"Questions","QRMon","Date list plot","Parameter","dateListPlotQ"
+"Questions","QRMon","Date list plot","TrueValues","{""true"", ""yes"", ""datelist"", ""date list"", ""datelist plot"", ""use date list plot""}"
+"Questions","QRMon","Relative errors plot","TypePattern","_?BooleanQ"
+"Questions","QRMon","Relative errors plot","Threshold",0.75
+"Questions","QRMon","Relative errors plot","Parameter","relativeErrorsQ"
+"Questions","QRMon","Absolute errors plot","TypePattern","_?BooleanQ"
+"Questions","QRMon","Absolute errors plot","Threshold",0.75
+"Questions","QRMon","Absolute errors plot","Parameter","absoluteErrorsQ"
+"Questions","QRMon","Which dataset to use","TypePattern","_String"
+"Questions","QRMon","Which dataset to use","Threshold",0.4
+"Questions","QRMon","Which dataset to use","Parameter","dataset"
+"Questions","QRMon","Which dataset to use","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QRMon","Which data to use","TypePattern","_String"
+"Questions","QRMon","Which data to use","Threshold",0.4
+"Questions","QRMon","Which data to use","Parameter","dataset"
+"Questions","QRMon","Which data to use","ContextWordsToRemove","{""data"", ""dataset""}"
+"Questions","QRMon","Which time series to use","TypePattern","_String"
+"Questions","QRMon","Which time series to use","Threshold",0.4
+"Questions","QRMon","Which time series to use","Parameter","dataset"
+"Questions","QRMon","Which time series to use","ContextWordsToRemove","{""time series""}"
+"Questions","QRMon","Over which","TypePattern","_String"
+"Questions","QRMon","Over which","Threshold",0.35
+"Questions","QRMon","Over which","Parameter","dataset"
+"Questions","QRMon","Over which","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QRMon","Over what","TypePattern","_String"
+"Questions","QRMon","Over what","Threshold",0.35
+"Questions","QRMon","Over what","Parameter","dataset"
+"Questions","QRMon","Over what","ContextWordsToRemove","{""dataset"", ""data""}"
+"Questions","QRMon","Which probabilities","TypePattern","{_?NumericQ..}"
+"Questions","QRMon","Which probabilities","Threshold",0.7
+"Questions","QRMon","Which probabilities","Parameter","probs"
+"Questions","QRMon","Which probabilities","ContextWordsToRemove","{""probabilities""}"
+"Questions","QRMon","Which regression quantiles","TypePattern","{_?NumericQ..}"
+"Questions","QRMon","Which regression quantiles","Threshold",0.6
+"Questions","QRMon","Which regression quantiles","Parameter","probs"
+"Questions","QRMon","Which regression quantiles","ContextWordsToRemove","{""regression quantiles""}"
+"Templates","QuantileRegression","Python","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","QuantileRegression","R","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","QuantileRegression","WL","Template","TemplateObject[{""Module[{qrData,aQRFuncs,aQRPlotData},\nqrData = "", TemplateSlot[""dataset""], "";\nqrData = N@Which[ Head[qrData] === TemporalData, QuantityMagnitude[qrData[\""Path\""]], VectorQ[qrData], Transpose[{Range@Length@qrData, qrData}], True, qrData];\nEcho[ResourceFunction[\""RecordsSummary\""][qrData],\""data summary:\""];\naQRFuncs = AssociationThread[ "", TemplateSlot[""probs""], "", ResourceFunction[\""QuantileRegression\""][qrData, "", TemplateSlot[""knots""], "", "", TemplateSlot[""probs""], "", InterpolationOrder->"", TemplateSlot[""intOrder""], ""]];\naQRPlotData = Prepend[(Transpose[{qrData[[All, 1]], #1 /@ qrData[[All, 1]]}] &) /@ aQRFuncs, \""data\"" -> qrData];\nEcho[ListPlot[Values[aQRPlotData], Joined -> Prepend[Table[True, Length[aQRPlotData]-1], False], PlotLegends -> Keys[aQRPlotData], PlotTheme -> \""Detailed\"", FrameLabel -> {\""Regressor\"", \""Value\""}, ImageSize -> Medium],\""regression quantiles:\""];\nEcho[Map[Function[{qFunc},\nDateListPlot[\nMap[{#[[1]], (qFunc[#[[1]]] - #[[2]])/#[[2]]} &, qrData], Joined -> False, PlotRange -> All, Filling -> Axis, PlotTheme -> \""Detailed\"", ImageSize -> Medium]], aQRFuncs],\""errors:\""];\n]""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","QRMon","Python","Template","TemplateObject[{""print(\""Example API -- no actual implementation !!!\"")\nqrObj = QRMonUnit("", TemplateSlot[""dataset""], "")\nQRMonEchoDataSummary(qrObj)\nqrObj = QRMonQuantileRegression(obj, df = "", TemplateSlot[""knots""], "", probabilities = "", TemplateSlot[""probs""], "", degree = "", TemplateSlot[""intOrder""], "")\nQRMonPlot(qrObj, datePlotQ = "", TemplateSlot[""dateListPlotQ""], "" )\nQRMonErrorsPlot(qrObj, relativeErrors = "", TemplateSlot[""relativeErrorsQ""], "", datePlotQ = "", TemplateSlot[""dateListPlotQ""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","QRMon","R","Template","TemplateObject[{""qrObj <-\nQRMonUnit("", TemplateSlot[""dataset""], "") %>%\nQRMonEchoDataSummary() %>%\nQRMonQuantileRegression(df = "", TemplateSlot[""knots""], "", probabilities = "", TemplateSlot[""probs""], "", degree = "", TemplateSlot[""intOrder""], "") %>%\nQRMonPlot(datePlotQ = "", TemplateSlot[""dateListPlotQ""], "" ) %>%\nQRMonErrorsPlot(relativeErrors = "", TemplateSlot[""relativeErrorsQ""], "", datePlotQ = "", TemplateSlot[""dateListPlotQ""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","QRMon","WL","Template","TemplateObject[{""qrObj=\nQRMonUnit["", TemplateSlot[""dataset""], ""]⟹\nQRMonEchoDataSummary[]⟹\nQRMonQuantileRegression["", TemplateSlot[""knots""], "", "", TemplateSlot[""probs""], "", InterpolationOrder->"", TemplateSlot[""intOrder""], ""]⟹\nQRMonPlot[\""DateListPlot\""->"", TemplateSlot[""dateListPlotQ""], "",PlotTheme->\""Detailed\""]⟹\nQRMonErrorPlots[\""RelativeErrors\""->"", TemplateSlot[""relativeErrorsQ""], "",\""DateListPlot\""->"", TemplateSlot[""dateListPlotQ""], "",PlotTheme->\""Detailed\""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","LatentSemanticAnalysis","Python","Template","TemplateObject[{""print(\""Example API -- no actual implementation !!!\"")\nlsaObj = LSAMonUnit("", TemplateSlot[""textData""], "")\nlsaObj = LSAMonMakeDocumentTermMatrix(lsaObj, stemWordsQ = "", TemplateSlot[""stemmingRules""], "", stopWords = "", TemplateSlot[""stopWords""], "")\nLSAMonEchoDocumentTermMatrixStatistics(lsaObj, logBase = 10)\nlsaObj = LSAMonApplyTermWeightFunctions(lsaObj, globalWeightFunction = \"""", TemplateSlot[""globalWeightFunction""], ""\"", localWeightFunction = \"""", TemplateSlot[""localWeightFunction""], ""\"", normalizerFunction = \"""", TemplateSlot[""normalizerFunction""], ""\"")\nlsaObj = LSAMonExtractTopics(lsaObj, numberOfTopics = "", TemplateSlot[""numberOfTopics""], "", method = \"""", TemplateSlot[""method""], ""\"", maxSteps = "", TemplateSlot[""maxSteps""], "", minNumberOfDocumentsPerTerm = "", TemplateSlot[""minNumberOfDocumentsPerTerm""], "")\nLSAMonEchoTopicsTable(lsaObj, numberOfTerms = "", TemplateSlot[""topicsTableNumberOfTerms""], "", wideFormQ = TRUE)\nLSAMonEchoStatisticalThesaurus(lsaObj, words = "", TemplateSlot[""statThesaurusWords""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","LatentSemanticAnalysis","R","Template","TemplateObject[{""lsaObj <-\nLSAMonUnit("", TemplateSlot[""textData""], "") %>%\nLSAMonMakeDocumentTermMatrix(stemWordsQ = "", TemplateSlot[""stemmingRules""], "", stopWords = "", TemplateSlot[""stopWords""], "") %>%\nLSAMonEchoDocumentTermMatrixStatistics(logBase = 10) %>%\nLSAMonApplyTermWeightFunctions(globalWeightFunction = \"""", TemplateSlot[""globalWeightFunction""], ""\"", localWeightFunction = \"""", TemplateSlot[""localWeightFunction""], ""\"", normalizerFunction = \"""", TemplateSlot[""normalizerFunction""], ""\"") %>%\nLSAMonExtractTopics(numberOfTopics = "", TemplateSlot[""numberOfTopics""], "", method = \"""", TemplateSlot[""method""], ""\"", maxSteps = "", TemplateSlot[""maxSteps""], "", minNumberOfDocumentsPerTerm = "", TemplateSlot[""minNumberOfDocumentsPerTerm""], "") %>%\nLSAMonEchoTopicsTable(numberOfTerms = "", TemplateSlot[""topicsTableNumberOfTerms""], "", wideFormQ = TRUE) %>%\nLSAMonEchoStatisticalThesaurus(words = "", TemplateSlot[""statThesaurusWords""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","LatentSemanticAnalysis","WL","Template","TemplateObject[{""lsaObj=\nLSAMonUnit["", TemplateSlot[""textData""], ""] ⟹\nLSAMonMakeDocumentTermMatrix[ \""StemmingRules\"" -> "", TemplateSlot[""stemmingRules""], "", \""StopWords\"" -> "", TemplateSlot[""stopWords""], ""] ⟹\nLSAMonEchoDocumentTermMatrixStatistics[\""LogBase\"" -> 10] ⟹\nLSAMonApplyTermWeightFunctions[\""GlobalWeightFunction\"" -> \"""", TemplateSlot[""globalWeightFunction""], ""\"", \""LocalWeightFunction\"" -> \"""", TemplateSlot[""localWeightFunction""], ""\"", \""NormalizerFunction\"" -> \"""", TemplateSlot[""normalizerFunction""], ""\""] ⟹\nLSAMonExtractTopics[\""NumberOfTopics\"" -> "", TemplateSlot[""numberOfTopics""], "", Method -> \"""", TemplateSlot[""method""], ""\"", \""MaxSteps\"" -> "", TemplateSlot[""maxSteps""], "", \""MinNumberOfDocumentsPerTerm\"" -> "", TemplateSlot[""minNumberOfDocumentsPerTerm""], ""] ⟹\nLSAMonEchoTopicsTable[\""NumberOfTerms\"" -> "", TemplateSlot[""topicsTableNumberOfTerms""], ""] ⟹\nLSAMonEchoStatisticalThesaurus[ \""Words\"" -> "", TemplateSlot[""statThesaurusWords""], ""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Classification","Python","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Classification","R","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Classification","WL","Template","TemplateObject[{""Module[{clData,clDataTraining,clDataTesting,clObj,clCMObj,clMeasurements},\nclData = ClConToNormalClassifierData["", TemplateSlot[""data""], ""];\n{clDataTraining, clDataTesting} = TakeDrop[clData, Floor["", TemplateSlot[""splitRatio""], "" * Length[clData]]];\nclObj = Classify[clDataTraining, Method -> \"""", TemplateSlot[""method""], ""\""];\nclCMObj = ClassifierMeasurements[clObj, clDataTesting];\nEcho[ clCMObj[{\""Accuracy\"", \""Precision\"", \""Recall\""}], \""measurements:\""];\nclMeasurements = Intersection[clCMObj[\""Properties\""], "", TemplateSlot[""measurementFuncs""], ""];\nIf[ Length[clMeasurements] > 0, Echo[ clCMObj[clMeasurements], ToString[clMeasurements] <> \"":\""]];\nEcho[ clCMObj[\""ConfusionMatrixPlot\""], \""confusion matrix:\""];\n]""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ClCon","Python","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ClCon","R","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ClCon","WL","Template","TemplateObject[{""clObj=\nClConUnit["", TemplateSlot[""data""], ""]⟹\nClConSplitData["", TemplateSlot[""splitRatio""], ""]⟹\nClConEchoDataSummary⟹\nClConMakeClassifier[\"""", TemplateSlot[""method""], ""\""]⟹\nClConClassifierMeasurements["", TemplateSlot[""measurementFuncs""], ""]⟹\nClConEchoValue⟹\nClConROCPlot["", TemplateSlot[""rocPlotFuncs""], ""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","RandomTabularDataset","Python","Template","TemplateObject[{""print(\""Example API -- no actual implementation !!!\"")\n            RandomDataFrame(nrow = "", TemplateSlot[""nrow""], "", ncol = "", TemplateSlot[""ncol""], "", columnNamesGenerator = "", TemplateSlot[""columnNamesGenerator""], "", form =  \"""", TemplateSlot[""form""], ""\"", maxNumberOfValues = "", TemplateSlot[""maxNumberOfValues""], "", minNumberOfValues = "", TemplateSlot[""minNumberOfValues""], "", rowNamesQ = "", TemplateSlot[""rowKeys""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","RandomTabularDataset","R","Template","TemplateObject[{""RandomDataFrame(nrow = "", TemplateSlot[""nrow""], "", ncol = "", TemplateSlot[""ncol""], "", columnNamesGenerator = "", TemplateSlot[""columnNamesGenerator""], "", form =  \"""", TemplateSlot[""form""], ""\"", maxNumberOfValues = "", TemplateSlot[""maxNumberOfValues""], "", minNumberOfValues = "", TemplateSlot[""minNumberOfValues""], "", rowNamesQ = "", TemplateSlot[""rowKeys""], "")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","RandomTabularDataset","WL","Template","TemplateObject[{""ResourceFunction[\""RandomTabularDataset\""][{"", TemplateSlot[""nrow""], "", "", TemplateSlot[""ncol""], ""}, \""ColumnNamesGenerator\"" -> "", TemplateSlot[""columnNamesGenerator""], "", \""Form\"" -> \"""", TemplateSlot[""form""], ""\"", \""MaxNumberOfValues\"" -> "", TemplateSlot[""maxNumberOfValues""], "", \""MinNumberOfValues\"" -> "", TemplateSlot[""minNumberOfValues""], "", \""RowKeys\"" -> "", TemplateSlot[""rowKeys""], ""]""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Recommendations","Python","Template","TemplateObject[{""print(\""Example API -- no actual implementation !!!\"")\nsmrObj = SMRMonUnit()\nsmrObj = SMRMonCreate( data = "", TemplateSlot[""dataset""], "")\nsmrObj = SMRMonRecommendByProfile(smrObj, profile = "", TemplateSlot[""prof""], "", nrecs = "", TemplateSlot[""nrecs""], "")\nsmrObj = SMRMonJoinAcross(smrObj, data = "", TemplateSlot[""dataset""], "")\nSMRMonEchoValue(smrObj)""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Recommendations","R","Template","TemplateObject[{""smrObj <-\nSMRMonUnit() %>%\nSMRMonCreate( data = "", TemplateSlot[""dataset""], "") %>%\nSMRMonRecommendByProfile( profile = "", TemplateSlot[""prof""], "", nrecs = "", TemplateSlot[""nrecs""], "") %>%\nSMRMonJoinAcross( data = "", TemplateSlot[""dataset""], "") %>%\nSMRMonEchoValue()""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","Recommendations","WL","Template","TemplateObject[{""smrObj=\nSMRMonUnit[]⟹\nSMRMonCreate["", TemplateSlot[""dataset""], ""]⟹\nSMRMonRecommendByProfile["", TemplateSlot[""prof""], "", "", TemplateSlot[""nrecs""], ""]⟹\nSMRMonJoinAcross["", TemplateSlot[""dataset""], ""]⟹\nSMRMonEchoValue[];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","NeuralNetworkCreation","Python","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","NeuralNetworkCreation","R","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","NeuralNetworkCreation","WL","Template","TemplateObject[{""\""Not implemented\""""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Defaults","ProgrammingEnvironment","All","Language","WL"
+"Defaults","ProgrammingEnvironment","All","Packages","None"
+"Defaults","QuantileRegression","All","knots",12
+"Defaults","QuantileRegression","All","probs","{0.25, 0.5, 0.75}"
+"Defaults","QuantileRegression","All","intOrder",3
+"Defaults","QuantileRegression","All","rescaleTimeAxisQ","False"
+"Defaults","QuantileRegression","All","rescaleValueAxisQ","False"
+"Defaults","QuantileRegression","All","dateListPlotQ","False"
+"Defaults","QuantileRegression","All","dataset","None"
+"Defaults","QuantileRegression","All","relativeErrorsQ","False"
+"Defaults","LatentSemanticAnalysis","All","globalWeightFunction","IDF"
+"Defaults","LatentSemanticAnalysis","All","localWeightFunction","None"
+"Defaults","LatentSemanticAnalysis","All","maxSteps",16
+"Defaults","LatentSemanticAnalysis","All","method","SVD"
+"Defaults","LatentSemanticAnalysis","All","minNumberOfDocumentsPerTerm",20
+"Defaults","LatentSemanticAnalysis","All","normalizerFunction","Cosine"
+"Defaults","LatentSemanticAnalysis","All","numberOfTopics",40
+"Defaults","LatentSemanticAnalysis","All","removeStopWordsQ","True"
+"Defaults","LatentSemanticAnalysis","All","showTopicsTableQ","True"
+"Defaults","LatentSemanticAnalysis","All","statThesaurusWords","None"
+"Defaults","LatentSemanticAnalysis","All","stemmingRules","Automatic"
+"Defaults","LatentSemanticAnalysis","All","stopWords","Automatic"
+"Defaults","LatentSemanticAnalysis","All","textData","None"
+"Defaults","LatentSemanticAnalysis","All","thesaurusWords","None"
+"Defaults","LatentSemanticAnalysis","All","topicsTableNumberOfTerms",10
+"Defaults","Classification","All","data","None"
+"Defaults","Classification","All","splitRatio",0.75
+"Defaults","Classification","All","method","LogisticRegression"
+"Defaults","Classification","All","measurementFuncs","{""Accuracy"", ""Precision"", ""Recall""}"
+"Defaults","Classification","All","rocPlotFuncs","{""FPR"", ""TPR""}"
+"Defaults","RandomTabularDataset","All","nrow","Automatic"
+"Defaults","RandomTabularDataset","All","ncol","Automatic"
+"Defaults","RandomTabularDataset","All","columnNamesGenerator","Automatic"
+"Defaults","RandomTabularDataset","All","generators","Automatic"
+"Defaults","RandomTabularDataset","All","form","Wide"
+"Defaults","RandomTabularDataset","All","maxNumberOfValues","Automatic"
+"Defaults","RandomTabularDataset","All","minNumberOfValues","Automatic"
+"Defaults","RandomTabularDataset","All","pointwiseGeneration","False"
+"Defaults","RandomTabularDataset","All","rowKeys","False"
+"Defaults","Recommendations","All","dataset","None"
+"Defaults","Recommendations","All","prof","None"
+"Defaults","Recommendations","All","nrecs",12
+"Defaults","ClCon","All","data","None"
+"Defaults","ClCon","All","splitRatio",0.75
+"Defaults","ClCon","All","method","LogisticRegression"
+"Defaults","ClCon","All","measurementFuncs","{""Accuracy"", ""Precision"", ""Recall""}"
+"Defaults","ClCon","All","rocPlotFuncs","{""FPR"", ""TPR""}"
+"Defaults","QRMon","All","knots",12
+"Defaults","QRMon","All","probs","{0.25, 0.5, 0.75}"
+"Defaults","QRMon","All","intOrder",3
+"Defaults","QRMon","All","rescaleTimeAxisQ","False"
+"Defaults","QRMon","All","rescaleValueAxisQ","False"
+"Defaults","QRMon","All","dateListPlotQ","False"
+"Defaults","QRMon","All","dataset","None"
+"Defaults","QRMon","All","relativeErrorsQ","False"
+"Shortcuts","ProgrammingEnvironment","All","ProgrammingEnvironment","ProgrammingEnvironment"
+"Shortcuts","ProgrammingEnvironment","All","Programming","ProgrammingEnvironment"
+"Shortcuts","ProgrammingEnvironment","All","System","ProgrammingEnvironment"
+"Shortcuts","QuantileRegression","All","QuantileRegression","QuantileRegression"
+"Shortcuts","QuantileRegression","All","QR","QuantileRegression"
+"Shortcuts","QRMon","All","QRMon","QRMon"
+"Shortcuts","LatentSemanticAnalysis","All","LatentSemanticAnalysis","LatentSemanticAnalysis"
+"Shortcuts","LatentSemanticAnalysis","All","LSAMon","LatentSemanticAnalysis"
+"Shortcuts","LatentSemanticAnalysis","All","LSA","LatentSemanticAnalysis"
+"Shortcuts","Classification","All","Classification","Classification"
+"Shortcuts","Classification","All","Classify","Classification"
+"Shortcuts","ClCon","All","ClCon","ClCon"
+"Shortcuts","ClCon","All","CLMon","ClCon"
+"Shortcuts","RandomTabularDataset","All","RandomTabularDataset","RandomTabularDataset"
+"Shortcuts","RandomTabularDataset","All","RandomDataset","RandomTabularDataset"
+"Shortcuts","RandomTabularDataset","All","RandomDataGeneration","RandomTabularDataset"
+"Shortcuts","RandomTabularDataset","All","RandomDatasetGeneration","RandomTabularDataset"
+"Shortcuts","Recommendations","All","Recommendations","Recommendations"
+"Shortcuts","Recommendations","All","SMRMon","Recommendations"
+"Shortcuts","NeuralNetworkCreation","All","NeuralNetworkCreation","NeuralNetworkCreation"
