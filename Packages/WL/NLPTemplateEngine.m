@@ -823,7 +823,7 @@ Concretize[Automatic, command_String, opts : OptionsPattern[]] :=
 
       If[Length[DownValues[ComputationalWorkflowTypeClassifier`GetComputationalWorkflowTypeClassifier]] == 0,
         Echo["ComputationalWorkflowTypeClassifier.m", "Importing from GitHub:"];
-        Import["https://raw.githubusercontent.com/antononcube/MathematicaForPrediction/master/Misc/ComputationalWorkflowTypeClassifier.m"];
+        Import["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/Packages/WL/ComputationalWorkflowTypeClassifier.m"];
       ];
 
       cf = ComputationalWorkflowTypeClassifier`GetComputationalWorkflowTypeClassifier[];
