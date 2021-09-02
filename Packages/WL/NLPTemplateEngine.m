@@ -529,7 +529,7 @@ ConvertCSVData[ dsTESpecs_Dataset ] :=
 
       (* Check correctness of the dataset. *)
       lsExpectedColumnNames = {"DataType", "WorkflowType", "Group", "Key", "Value"};
-      If[ Length[Intersection[Normal@Keys@First@dsTESpecs, lsExpectedColumnNames]] <= Length[lsExpectedColumnNames],
+      If[ Length[Intersection[Normal@Keys@First@dsTESpecs, lsExpectedColumnNames]] < Length[lsExpectedColumnNames],
         Message[ConvertCSVData::cnames, ToString[lsExpectedColumnNames]];
         Return[$Failed]
       ];
@@ -540,14 +540,72 @@ ConvertCSVData[ dsTESpecs_Dataset ] :=
 
 Clear[ConvertCSVDataForType];
 
-ConvertCSVDataForType[ dsTESpecs_Dataset, type : ("Questions" | "Templates") ] :=
+ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Questions" ] :=
     Block[{dsQuery, aRes},
 
-      dsQuery = dsTESpecs[Select[#DataType == type&]];
+      dsQuery = dsTESpecs[Select[#DataType == dataType&]];
       dsQuery = Normal[dsQuery[Values]];
-      aRes = ResourceFunction["AssociationKeyDeflatten"][  Map[ Most[#] -> Last[#]&, dsQuery] ];
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> Last[#]&, dsQuery] ];
 
-      aRes[type]
+      aRes[dataType]
+   ];
+
+ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
+    Block[{dsQuery, aRes},
+
+      dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+
+      (* We drop the "Key" column that has to have "Template" value,
+      since that column was added to fit the global long-format CSV. *)
+      dsQuery = dsQuery[ All, KeyDrop[#, "Key"]&];
+      dsQuery = Normal[dsQuery[Values]];
+
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToExpression[Last[#]]&, dsQuery] ];
+
+      aRes[dataType]
+    ];
+
+ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
+    Block[{dsQuery, aRes},
+
+      dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+
+      (* We drop the "Key" column that has to have "Template" value,
+      since that column was added to fit the global long-format CSV. *)
+      dsQuery = dsQuery[ All, KeyDrop[#, "Key"]&];
+      dsQuery = Normal[dsQuery[Values]];
+
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToExpression[Last[#]]&, dsQuery] ];
+
+      aRes[dataType]
+    ];
+
+ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Defaults" ] :=
+    Block[{dsQuery, aRes},
+
+      dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+
+      (* We drop the "Group" column that has to have "All" value,
+      since that column was added to fit the global long-format CSV. *)
+      (* Meaning, currently the defaults depend only from the workflow type,
+       not the workflow type and the target language.*)
+      dsQuery = dsQuery[ All, KeyDrop[#, "Group"]&];
+      dsQuery = Normal[dsQuery[Values]];
+
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToExpression[Last[#]]&, dsQuery] ];
+
+      aRes[dataType]
+    ];
+
+ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Shortcuts" ] :=
+    Block[{dsQuery},
+
+      dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+
+      (* We only need "Key" and "Value" for the shortcuts. *)
+      dsQuery = dsQuery[ All, {"Key", "Value"}];
+
+      Normal @ dsQuery[ Association, #Key -> #Value& ]
     ];
 
 End[];
