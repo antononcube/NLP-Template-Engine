@@ -149,9 +149,15 @@ finds parameter values to fill-in the slots for the ttype template based on the 
 and creates corresponding executable expression. \
 If ttype is Automatic then a dedicated classifier function used to guess the template type.";
 
-ConvertCSVData::usage = "ConvertCSVData";
+NLPTemplateEngineAddData::usage = "NLPTemplateEngineAddData[dsSpecs_Dataset] \
+adds the template engine data specifications dsSpecs into Concretize[\"Data\"].";
 
-ConvertCSVDataForType::usage = "ConvertCSVDataForType";
+NLPTemplateEngineReplaceData::usage = "NLPTemplateEngineReplaceData[dsSpecs_Dataset] \
+replaces the data in Concretize[\"Data\"] with template engine data specifications dsSpecs.";
+
+ConvertCSVData::usage = "ConvertCSVData is an internal function.";
+
+ConvertCSVDataForType::usage = "ConvertCSVDataForType is an internal function.";
 
 Begin["`Private`"];
 
@@ -203,7 +209,9 @@ RemoveContextWords[s : (_String | {_String ..}), words : {_String..} ] :=
 Clear[GetAnswers];
 Options[GetAnswers] = Join[ Options[GetRawAnswers], {"RemoveByThreshold" -> True}];
 GetAnswers[workflowTypeArg_String, command_String, nAnswers_Integer : 4, opts : OptionsPattern[]] :=
-    Block[{workflowType = workflowTypeArg, aRes, aParameterQuestions, parVal},
+    Block[{workflowType = workflowTypeArg, aQuestions, aRes, aParameterQuestions, parVal},
+
+      aQuestions = Concretize["Data"]["Questions"];
 
       (*
        We have multiple questions for each parameter in order to capture relevant answers
@@ -354,7 +362,9 @@ Concretize[cf_ClassifierFunction, command_String, opts : OptionsPattern[]] :=
     Concretize[ cf[command], command, opts];
 
 Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
-    Block[{workflowType = workflowTypeArg, lsKnownLanguages, userID, lang, aRes, code, codeExpr},
+    Block[{workflowType = workflowTypeArg,
+      aQuestions, aTemplates, aDefaults, aShortcuts,
+      lsKnownLanguages, userID, lang, aRes, code, codeExpr},
 
       {aQuestions, aTemplates, aDefaults, aShortcuts} = Values @ KeyTake[ Concretize["Data"], {"Questions", "Templates", "Defaults", "Shortcuts"}];
 
@@ -544,6 +554,8 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Questions" ] :=
     Block[{dsQuery, aRes},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+      If[ Length[dsQuery] == 0, Return[<||>]];
+
       dsQuery = Normal[dsQuery[Values]];
       aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> Last[#]&, dsQuery] ];
 
@@ -554,13 +566,14 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
     Block[{dsQuery, aRes},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+      If[ Length[dsQuery] == 0, Return[<||>]];
 
       (* We drop the "Key" column that has to have "Template" value,
       since that column was added to fit the global long-format CSV. *)
       dsQuery = dsQuery[ All, KeyDrop[#, "Key"]&];
       dsQuery = Normal[dsQuery[Values]];
 
-      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToExpression[Last[#]]&, dsQuery] ];
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> If[ StringQ[Last[#]], ToExpression[Last[#]], Last[#]]&, dsQuery] ];
 
       aRes[dataType]
     ];
@@ -569,6 +582,7 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
     Block[{dsQuery, aRes},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+      If[ Length[dsQuery] == 0, Return[<||>]];
 
       (* We drop the "Key" column that has to have "Template" value,
       since that column was added to fit the global long-format CSV. *)
@@ -584,6 +598,7 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Defaults" ] :=
     Block[{dsQuery, aRes},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+      If[ Length[dsQuery] == 0, Return[<||>]];
 
       (* We drop the "Group" column that has to have "All" value,
       since that column was added to fit the global long-format CSV. *)
@@ -601,12 +616,69 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Shortcuts" ] :=
     Block[{dsQuery},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
+      If[ Length[dsQuery] == 0, Return[<||>]];
 
       (* We only need "Key" and "Value" for the shortcuts. *)
       dsQuery = dsQuery[ All, {"Key", "Value"}];
 
       Normal @ dsQuery[ Association, #Key -> #Value& ]
     ];
+
+
+(***********************************************************)
+(* Add template engine data                                *)
+(***********************************************************)
+
+Clear[NLPTemplateEngineAddData];
+
+NLPTemplateEngineAddData::nargs = "The first argument is expected to be a dataset.";
+
+NLPTemplateEngineAddData[ dsTESpecs_Dataset ] :=
+    Block[{aRes},
+
+      aRes = ConvertCSVData[dsTESpecs];
+
+      Map[
+        With[{k = #, ascGlobal = Concretize["Data"],
+          asc = Concretize["Data"][#], newAsc = aRes[#]},
+          Concretize["Data"] := Append[ascGlobal, k -> Join[asc, newAsc]]
+        ] &,
+        Keys[aRes]
+      ];
+
+      Concretize["Data"]
+    ];
+
+NLPTemplateEngineAddData[___] :=
+    Block[{},
+      Message[NLPTemplateEngineAddData::nargs];
+      $Failed
+    ];
+
+
+(***********************************************************)
+(* Replace template engine data                            *)
+(***********************************************************)
+
+Clear[NLPTemplateEngineReplaceData];
+
+NLPTemplateEngineReplaceData::nargs = "The first argument is expected to be a dataset.";
+
+NLPTemplateEngineReplaceData[ dsTESpecs_Dataset ] :=
+    Block[{aRes},
+
+      aRes = ConvertCSVData[dsTESpecs];
+      (* Some verification is would be nice. *)
+
+      Concretize["Data"] = aRes
+    ];
+
+NLPTemplateEngineReplaceData[___] :=
+    Block[{},
+      Message[NLPTemplateEngineReplaceData::nargs];
+      $Failed
+    ];
+
 
 End[];
 
