@@ -586,7 +586,7 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
     ];
 
 ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
-    Block[{dsQuery, aRes},
+    Block[{dsQuery, ToTemplateExpression, aRes},
 
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
       If[ Length[dsQuery] == 0, Return[<||>]];
@@ -596,7 +596,8 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
       dsQuery = dsQuery[ All, KeyDrop[#, "Key"]&];
       dsQuery = Normal[dsQuery[Values]];
 
-      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToExpression[Last[#]]&, dsQuery] ];
+      ToTemplateExpression = If[ StringMatchQ[ #, StartOfString ~~ "TemplateObject[" ~~ __], ToExpression[#], StringTemplate[#]]&;
+      aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> ToTemplateExpression[Last[#]] &, dsQuery] ];
 
       aRes[dataType]
     ];
