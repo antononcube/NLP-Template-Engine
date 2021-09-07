@@ -35,7 +35,7 @@
 "Questions","SendMail","Which files to attach","Threshold",0.35
 "Questions","SendMail","Which files to attach","Parameter","body"
 "Questions","SendMail","Which files to attach","ContextWordsToRemove","{""content"", ""body""}"
-"Templates","SendMail","WL","Template","SendMail[<|""To""->`to`,""Subject""->`subject`,""Body""->`body`,""AttachedFiles""->`attachedFiles`|>]"
+"Templates","SendMail","WL","Template","SendMail[<|""To""->`to`,""Subject""->""`subject`"",""Body""->`body`,""AttachedFiles""->`attachedFiles`|>]"
 "Defaults","SendMail","All","to","None"
 "Defaults","SendMail","All","subject","Attempt"
 "Defaults","SendMail","All","body","None"
