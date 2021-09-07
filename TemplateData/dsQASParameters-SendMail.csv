@@ -1,0 +1,44 @@
+"DataType","WorkflowType","Group","Key","Value"
+"Questions","SendMail","Who to send the email to","TypePattern","{_String..}"
+"Questions","SendMail","Who to send the email to","Threshold",0.35
+"Questions","SendMail","Who to send the email to","Parameter","to"
+"Questions","SendMail","Who to send the email to","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who to send it to","TypePattern","{_String..}"
+"Questions","SendMail","Who to send it to","Threshold",0.35
+"Questions","SendMail","Who to send it to","Parameter","to"
+"Questions","SendMail","Who to send it to","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who is the receiver","TypePattern","{_String..}"
+"Questions","SendMail","Who is the receiver","Threshold",0.35
+"Questions","SendMail","Who is the receiver","Parameter","to"
+"Questions","SendMail","Who is the receiver","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Which email address","TypePattern","{_String..}"
+"Questions","SendMail","Which email address","Threshold",0.35
+"Questions","SendMail","Which email address","Parameter","to"
+"Questions","SendMail","Which email address","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","What subject","TypePattern","_String"
+"Questions","SendMail","What subject","Threshold",0.4
+"Questions","SendMail","What subject","Parameter","subject"
+"Questions","SendMail","What subject","ContextWordsToRemove","{""subject"", ""title""}"
+"Questions","SendMail","What it the title","TypePattern","_String"
+"Questions","SendMail","What it the title","Threshold",0.4
+"Questions","SendMail","What it the title","Parameter","subject"
+"Questions","SendMail","What it the title","ContextWordsToRemove","{""subject"", ""title""}"
+"Questions","SendMail","What it the body","TypePattern","_String"
+"Questions","SendMail","What it the body","Threshold",0.35
+"Questions","SendMail","What it the body","Parameter","body"
+"Questions","SendMail","What it the body","ContextWordsToRemove","{""content"", ""body""}"
+"Questions","SendMail","What it the content","TypePattern","_String"
+"Questions","SendMail","What it the content","Threshold",0.35
+"Questions","SendMail","What it the content","Parameter","body"
+"Questions","SendMail","What it the content","ContextWordsToRemove","{""content"", ""body""}"
+"Questions","SendMail","Which files to attach","TypePattern","{_String..}"
+"Questions","SendMail","Which files to attach","Threshold",0.35
+"Questions","SendMail","Which files to attach","Parameter","body"
+"Questions","SendMail","Which files to attach","ContextWordsToRemove","{""content"", ""body""}"
+"Templates","SendMail","WL","Template","SendMail[<|""To""->`to`,""Subject""->`subject`,""Body""->`body`,""AttachedFiles""->`attachedFiles`|>]"
+"Defaults","SendMail","All","to","None"
+"Defaults","SendMail","All","subject","Attempt"
+"Defaults","SendMail","All","body","None"
+"Defaults","SendMail","All","attachedFiles","None"
+"Shortcuts","SendMail","All","SendMail","SendMail"
+"Shortcuts","SendMail","All","Emailing","SendMail"
