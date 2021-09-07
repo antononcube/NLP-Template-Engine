@@ -175,7 +175,10 @@ GetRawAnswers::nwft =
 Options[GetRawAnswers] = Options[FindTextualAnswer];
 
 GetRawAnswers[workflowTypeArg_String, command_String, nAnswers_Integer : 4, opts : OptionsPattern[]] :=
-    Block[{workflowType = workflowTypeArg, aRes},
+    Block[{workflowType = workflowTypeArg, aShortcuts, aQuestions, aRes},
+
+      aShortcuts = Concretize["Data"]["Shortcuts"];
+      aQuestions = Concretize["Data"]["Questions"];
 
       workflowType = workflowType /. aShortcuts;
 
@@ -215,8 +218,9 @@ GetAnswers::ncrw = "Problematic \"ContextWordsToRemove\" specification";
 Options[GetAnswers] = Join[ Options[GetRawAnswers], {"RemoveByThreshold" -> True}];
 
 GetAnswers[workflowTypeArg_String, command_String, nAnswers_Integer : 4, opts : OptionsPattern[]] :=
-    Block[{workflowType = workflowTypeArg, aQuestions, aRes, aParameterQuestions, parVal},
+    Block[{workflowType = workflowTypeArg, aShortcuts, aQuestions, aRes, aParameterQuestions, parVal},
 
+      aShortcuts = Concretize["Data"]["Shortcuts"];
       aQuestions = Concretize["Data"]["Questions"];
 
       (*
