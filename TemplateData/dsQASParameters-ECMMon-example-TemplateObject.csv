@@ -1,0 +1,34 @@
+"DataType","WorkflowType","Group","Key","Value"
+"Questions","ECMMon","Which seed model to use","TypePattern","_String"
+"Questions","ECMMon","Which seed model to use","Threshold",0.35
+"Questions","ECMMon","Which seed model to use","Parameter","model"
+"Questions","ECMMon","Which seed model to use","ContextWordsToRemove","{""base"", ""model"", ""seed"", ""simulate"", ""simulation""}"
+"Questions","ECMMon","Which base model to use","TypePattern","_String"
+"Questions","ECMMon","Which base model to use","Threshold",0.35
+"Questions","ECMMon","Which base model to use","Parameter","model"
+"Questions","ECMMon","Which base model to use","ContextWordsToRemove","{""base"", ""model"", ""seed"", ""simulate"", ""simulation""}"
+"Questions","ECMMon","How many simulation days","TypePattern","_Integer"
+"Questions","ECMMon","How many simulation days","Threshold",0.35
+"Questions","ECMMon","How many simulation days","Parameter","ndays"
+"Questions","ECMMon","How many simulation days","ContextWordsToRemove","{""days"", ""many"", ""number"", ""simulate"", ""simulation""}"
+"Questions","ECMMon","How many days","TypePattern","_Integer"
+"Questions","ECMMon","How many days","Threshold",0.35
+"Questions","ECMMon","How many days","Parameter","ndays"
+"Questions","ECMMon","How many days","ContextWordsToRemove","{""days"", ""many"", ""number""}"
+"Questions","ECMMon","What number of days","TypePattern","_Integer"
+"Questions","ECMMon","What number of days","Threshold",0.35
+"Questions","ECMMon","What number of days","Parameter","ndays"
+"Questions","ECMMon","What number of days","ContextWordsToRemove","{""days"", ""many"", ""number""}"
+"Questions","ECMMon","What is the contact rate","TypePattern","_?NumberQ"
+"Questions","ECMMon","What is the contact rate","Threshold",0.35
+"Questions","ECMMon","What is the contact rate","Parameter","contactRate"
+"Questions","ECMMon","What is the contact rate","ContextWordsToRemove","{""contact"", ""rate""}"
+"Templates","ECMMon","Python","Template","TemplateObject[{""\nobj = ECMMonUnit( model = "", TemplateSlot[""model""], ""Model())\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [SPt = 100000])\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [INSPt = 0])\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [ISSPt = 1])\nobj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateINSP = "", TemplateSlot[""contactRate""], ""])\nobj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateISSP = "", TemplateSlot[""contactRate""], ""])\nobj = ECMMonSimulate( ecmObj = obj, maxTime = "", TemplateSlot[""ndays""], "")\nprint(obj)\nobj = ECMMonPlotSolutions( ecmObj = obj, stocksSpec = \"".*Population\"")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ECMMon","R","Template","TemplateObject[{""ecmObj <- ECMMonUnit( model = "", TemplateSlot[""model""], ""Model()) %>%\nECMMonAssignInitialConditions( initConds = c(SPt = 100000) ) %>%\nECMMonAssignInitialConditions( initConds = c(INSPt = 0) ) %>%\nECMMonAssignInitialConditions( initConds = c(ISSPt = 1) ) %>%\nECMMonAssignRateValues( rateValues = c(contactRateINSP = "", TemplateSlot[""contactRate""], "") ) %>%\nECMMonAssignRateValues( rateValues = c(contactRateISSP = "", TemplateSlot[""contactRate""], "") ) %>%\nECMMonSimulate(maxTime = "", TemplateSlot[""ndays""], "") %>%\nECMMonEchoValue() %>%\nECMMonPlotSolutions( stocksSpec = \"".*Population\"")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ECMMon","WL","Template","TemplateObject[{""ecmObj = ECMMonUnit["", TemplateSlot[""model""], ""Model[t]]⟹\nECMMonAssignInitialConditions[<|SP[0] -> 100000|>]⟹\nECMMonAssignInitialConditions[<|INSP[0] -> 0|>]⟹\nECMMonAssignInitialConditions[<|ISSP[0] -> 1|>]⟹\nECMMonAssignRateRules[<|β[INSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonAssignRateRules[<|β[ISSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonSimulate[\""MaxTime\"" -> "", TemplateSlot[""ndays""], ""]⟹\nECMMonEchoValue[]⟹\nECMMonPlotSolutions[ \""Stocks\"" -> __ ~~ \""Population\""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Defaults","ECMMon","All","model","SEI2R"
+"Defaults","ECMMon","All","ndays",12
+"Defaults","ECMMon","All","contacRate","0.8"
+"Shortcuts","ECMMon","All","ECMMon","ECMMon"
+"Shortcuts","ECMMon","All","EpidemiologicModeling","ECMMon"
+"Shortcuts","ECMMon","All","EpidemiologyModeling","ECMMon"
