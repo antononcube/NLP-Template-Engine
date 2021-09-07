@@ -28,7 +28,7 @@
 "Templates","ECMMon","WL","Template","TemplateObject[{""ecmObj = ECMMonUnit["", TemplateSlot[""model""], ""Model[t]]⟹\nECMMonAssignInitialConditions[<|SP[0] -> 100000|>]⟹\nECMMonAssignInitialConditions[<|INSP[0] -> 0|>]⟹\nECMMonAssignInitialConditions[<|ISSP[0] -> 1|>]⟹\nECMMonAssignRateRules[<|β[INSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonAssignRateRules[<|β[ISSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonSimulate[\""MaxTime\"" -> "", TemplateSlot[""ndays""], ""]⟹\nECMMonEchoValue[]⟹\nECMMonPlotSolutions[ \""Stocks\"" -> __ ~~ \""Population\""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
 "Defaults","ECMMon","All","model","SEI2R"
 "Defaults","ECMMon","All","ndays",12
-"Defaults","ECMMon","All","contacRate","0.8"
+"Defaults","ECMMon","All","contactRate","0.8"
 "Shortcuts","ECMMon","All","ECMMon","ECMMon"
 "Shortcuts","ECMMon","All","EpidemiologicModeling","ECMMon"
 "Shortcuts","ECMMon","All","EpidemiologyModeling","ECMMon"
