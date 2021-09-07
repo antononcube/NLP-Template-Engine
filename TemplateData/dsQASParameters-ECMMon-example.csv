@@ -23,9 +23,34 @@
 "Questions","ECMMon","What is the contact rate","Threshold",0.35
 "Questions","ECMMon","What is the contact rate","Parameter","contactRate"
 "Questions","ECMMon","What is the contact rate","ContextWordsToRemove","{""contact"", ""rate""}"
-"Templates","ECMMon","Python","Template","TemplateObject[{""\nobj = ECMMonUnit( model = "", TemplateSlot[""model""], ""Model())\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [SPt = 100000])\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [INSPt = 0])\nobj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [ISSPt = 1])\nobj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateINSP = "", TemplateSlot[""contactRate""], ""])\nobj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateISSP = "", TemplateSlot[""contactRate""], ""])\nobj = ECMMonSimulate( ecmObj = obj, maxTime = "", TemplateSlot[""ndays""], "")\nprint(obj)\nobj = ECMMonPlotSolutions( ecmObj = obj, stocksSpec = \"".*Population\"")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
-"Templates","ECMMon","R","Template","TemplateObject[{""ecmObj <- ECMMonUnit( model = "", TemplateSlot[""model""], ""Model()) %>%\nECMMonAssignInitialConditions( initConds = c(SPt = 100000) ) %>%\nECMMonAssignInitialConditions( initConds = c(INSPt = 0) ) %>%\nECMMonAssignInitialConditions( initConds = c(ISSPt = 1) ) %>%\nECMMonAssignRateValues( rateValues = c(contactRateINSP = "", TemplateSlot[""contactRate""], "") ) %>%\nECMMonAssignRateValues( rateValues = c(contactRateISSP = "", TemplateSlot[""contactRate""], "") ) %>%\nECMMonSimulate(maxTime = "", TemplateSlot[""ndays""], "") %>%\nECMMonEchoValue() %>%\nECMMonPlotSolutions( stocksSpec = \"".*Population\"")""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
-"Templates","ECMMon","WL","Template","TemplateObject[{""ecmObj = ECMMonUnit["", TemplateSlot[""model""], ""Model[t]]⟹\nECMMonAssignInitialConditions[<|SP[0] -> 100000|>]⟹\nECMMonAssignInitialConditions[<|INSP[0] -> 0|>]⟹\nECMMonAssignInitialConditions[<|ISSP[0] -> 1|>]⟹\nECMMonAssignRateRules[<|β[INSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonAssignRateRules[<|β[ISSP] -> "", TemplateSlot[""contactRate""], ""|>]⟹\nECMMonSimulate[\""MaxTime\"" -> "", TemplateSlot[""ndays""], ""]⟹\nECMMonEchoValue[]⟹\nECMMonPlotSolutions[ \""Stocks\"" -> __ ~~ \""Population\""];""}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]"
+"Templates","ECMMon","Python","Template","
+obj = ECMMonUnit( model = `model`Model())
+obj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [SPt = 100000])
+obj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [INSPt = 0])
+obj = ECMMonAssignInitialConditions( ecmObj = obj, initConds = [ISSPt = 1])
+obj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateINSP = `contactRate`])
+obj = ECMMonAssignRateValues( ecmObj = obj, rateValues = [contactRateISSP = `contactRate`])
+obj = ECMMonSimulate( ecmObj = obj, maxTime = `ndays`)
+print(obj)
+obj = ECMMonPlotSolutions( ecmObj = obj, stocksSpec = "".*Population"")"
+"Templates","ECMMon","R","Template","ecmObj <- ECMMonUnit( model = `model`Model()) %>%
+ECMMonAssignInitialConditions( initConds = c(SPt = 100000) ) %>%
+ECMMonAssignInitialConditions( initConds = c(INSPt = 0) ) %>%
+ECMMonAssignInitialConditions( initConds = c(ISSPt = 1) ) %>%
+ECMMonAssignRateValues( rateValues = c(contactRateINSP = `contactRate`) ) %>%
+ECMMonAssignRateValues( rateValues = c(contactRateISSP = `contactRate`) ) %>%
+ECMMonSimulate(maxTime = `ndays`) %>%
+ECMMonEchoValue() %>%
+ECMMonPlotSolutions( stocksSpec = "".*Population"")"
+"Templates","ECMMon","WL","Template","ecmObj = ECMMonUnit[`model`Model[t]]⟹
+ECMMonAssignInitialConditions[<|SP[0] -> 100000|>]⟹
+ECMMonAssignInitialConditions[<|INSP[0] -> 0|>]⟹
+ECMMonAssignInitialConditions[<|ISSP[0] -> 1|>]⟹
+ECMMonAssignRateRules[<|β[INSP] -> `contactRate`|>]⟹
+ECMMonAssignRateRules[<|β[ISSP] -> `contactRate`|>]⟹
+ECMMonSimulate[""MaxTime"" -> `ndays`]⟹
+ECMMonEchoValue[]⟹
+ECMMonPlotSolutions[ ""Stocks"" -> __ ~~ ""Population""];"
 "Defaults","ECMMon","All","model","SEI2R"
 "Defaults","ECMMon","All","ndays",12
 "Defaults","ECMMon","All","contacRate","0.8"
