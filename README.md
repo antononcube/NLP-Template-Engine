@@ -98,6 +98,46 @@ Here is an interactive interface that gives "online" access to the functionaliti
 
 (I order to try out repository's TE "Question Answering System" radio button have to selected.)
 
+------
+
+## Bring your own templates
+
+0. Load the WL package:
+
+```mathematica
+Import["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/Packages/WL/NLPTemplateEngine.m"]
+```
+
+1. Get the "training" templates data (from CSV file you have created or changed) for a new workflow ("SendMail"):
+
+```mathematica
+dsSendMailTemplateEngineData = ResourceFunction["ImportCSVToDataset"]["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/TemplateData/dsQASParameters-SendMail.csv"];
+Dimensions[dsSendMailTemplateEngineData]
+
+(* {43, 5} *)
+```
+
+2. Add the ingested data for the new workflow (from the CSV file) into the NLP-Template-Engine:
+
+```mathematica
+NLPTemplateEngineAddData[dsSendMailTemplateEngineData] // Keys
+
+(* {"Questions", "Templates", "Defaults", "Shortcuts"} *)
+```
+
+3. Parse natural language specification with the newly ingested and onboarded workflow ("SendMail"):
+
+```mathematica
+Concretize["SendMail", "Send email to joedoe@gmail.com with content RandomReal[343], and the subject this is a random real call.", PerformanceGoal -> "Speed"]
+
+(* Hold[
+ SendMail[
+  Association["To" -> {"joedoe@gmail.com"}, 
+   "Subject" -> "a random real call", "Body" -> RandomReal, 
+   "AttachedFiles" -> None]]] *)
+```
+
+4. Experiment with running the generated code!
 
 ------
 
