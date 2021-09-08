@@ -102,14 +102,15 @@ Here is an interactive interface that gives "online" access to the functionaliti
 
 ## Bring your own templates
 
-0. Load the WL package:
+0. Load the NLP-Template-Engine
+   [WL package](./Packages/WL/NLPTemplateEngine.m):
 
 ```mathematica
 Import["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/Packages/WL/NLPTemplateEngine.m"]
 ```
 
 1. Get the "training" templates data (from CSV file you have created or changed) for a new workflow
-(["SendMail"](./TemplateData/dsQASParameters-SendMail.csv)):
+   (["SendMail"](./TemplateData/dsQASParameters-SendMail.csv)):
 
 ```mathematica
 dsSendMailTemplateEngineData = ResourceFunction["ImportCSVToDataset"]["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/TemplateData/dsQASParameters-SendMail.csv"];
