@@ -207,7 +207,7 @@ TakeLargestKey[args__] := StringTrim@First@Keys@TakeLargest[args];
 ClearAll[RemoveContextWords];
 RemoveContextWords[s : (_String | {_String ..}), {} ] := s;
 RemoveContextWords[s : (_String | {_String ..}), words : {_String..} ] :=
-    StringTrim[StringReplace[ s, Thread[Thread[StringExpression[WordBoundary, words, WordBoundary]] -> ""] ]];
+    StringTrim[StringReplace[ s, Thread[Thread[StringExpression[WordBoundary, words, WordBoundary]] -> ""], IgnoreCase -> True ]];
 RemoveContextWords[s_, args___] := (Message[GetAnswers::rw];s);
 
 
