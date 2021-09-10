@@ -36,6 +36,27 @@
 "Questions","SendMail","Which files to attach","Parameter","body"
 "Questions","SendMail","Which files to attach","ContextWordsToRemove","{""content"", ""body""}"
 "Templates","SendMail","WL","Template","SendMail[<|""To""->`to`,""Subject""->""`subject`"",""Body""->`body`,""AttachedFiles""->`attachedFiles`|>]"
+"Templates","SendMail","AutoHotKey","Template","!^m::
+toWho := `from`
+ccWho := `to`
+subject := ""`subject`""
+body := ""`body`""
+Run outlook.exe
+WinWait, Inbox
+Sleep 1000
+Send {Ctrl down}{Shift down}m{Ctrl up}{Shift up}
+Send %toWho%{Esc}
+Send {Tab}
+Send %ccWho%{Esc}
+Send {Tab}
+Send %subject%
+Send {Tab}
+Send %body%
+Sleep 1000
+MsgBox,4,,Would You Like To Send This Email??
+IfMsgBox Yes
+                Send {Alt down}s{Alt up}
+return"
 "Defaults","SendMail","All","to","None"
 "Defaults","SendMail","All","subject","Attempt"
 "Defaults","SendMail","All","body","None"
