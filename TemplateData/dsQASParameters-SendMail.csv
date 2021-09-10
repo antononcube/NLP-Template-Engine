@@ -1,20 +1,32 @@
 "DataType","WorkflowType","Group","Key","Value"
+"Questions","SendMail","Which api key","TypePattern","{_String..}"
+"Questions","SendMail","Which api key","Threshold",0.45
+"Questions","SendMail","Which api key","Parameter","apiKey"
+"Questions","SendMail","Which api key","ContextWordsToRemove","{""api"", ""key""}"
+"Questions","SendMail","Who the email is from","TypePattern","{_String..}"
+"Questions","SendMail","Who the email is from","Threshold",0.35
+"Questions","SendMail","Who the email is from","Parameter","from"
+"Questions","SendMail","Who the email is from","ContextWordsToRemove","{""from"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who is it from","TypePattern","{_String..}"
+"Questions","SendMail","Who is it from","Threshold",0.35
+"Questions","SendMail","Who is it from","Parameter","from"
+"Questions","SendMail","Who is it from","ContextWordsToRemove","{""from"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
 "Questions","SendMail","Who to send the email to","TypePattern","{_String..}"
 "Questions","SendMail","Who to send the email to","Threshold",0.35
 "Questions","SendMail","Who to send the email to","Parameter","to"
-"Questions","SendMail","Who to send the email to","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who to send the email to","ContextWordsToRemove","{""to"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
 "Questions","SendMail","Who to send it to","TypePattern","{_String..}"
 "Questions","SendMail","Who to send it to","Threshold",0.35
 "Questions","SendMail","Who to send it to","Parameter","to"
-"Questions","SendMail","Who to send it to","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who to send it to","ContextWordsToRemove","{""to"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
 "Questions","SendMail","Who is the receiver","TypePattern","{_String..}"
 "Questions","SendMail","Who is the receiver","Threshold",0.35
 "Questions","SendMail","Who is the receiver","Parameter","to"
-"Questions","SendMail","Who is the receiver","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Who is the receiver","ContextWordsToRemove","{""to"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
 "Questions","SendMail","Which email address","TypePattern","{_String..}"
 "Questions","SendMail","Which email address","Threshold",0.35
 "Questions","SendMail","Which email address","Parameter","to"
-"Questions","SendMail","Which email address","ContextWordsToRemove","{""email"", ""mail"", ""send"", ""recipient"", ""addressee"", ""address""}"
+"Questions","SendMail","Which email address","ContextWordsToRemove","{""to"", ""email"", ""mail"", ""send"", ""it"", ""recipient"", ""addressee"", ""address""}"
 "Questions","SendMail","What subject","TypePattern","_String"
 "Questions","SendMail","What subject","Threshold",0.4
 "Questions","SendMail","What subject","Parameter","subject"
@@ -57,9 +69,27 @@ MsgBox,4,,Would You Like To Send This Email??
 IfMsgBox Yes
                 Send {Alt down}s{Alt up}
 return"
+"Templates","SendMail","RakuSendGrid","Template","
+my $sendgrid = Email::SendGrid.new(api-key => `apiKey`);
+$sendgrid.send-mail:
+        from => address(`from`, 'Sender name'),
+        to => address(`to`, 'Recipient name'),
+        subject => '`subject`',
+        content => {
+            'text/plain' => '`body`',
+            'text/html' => '<strong>`bodyHTML`</strong>'
+        };
+CATCH {
+    default {
+        note await .response.body;
+    }
+}"
+"Defaults","SendMail","All","apiKey","Automatic"
+"Defaults","SendMail","All","from","Automatic"
 "Defaults","SendMail","All","to","None"
 "Defaults","SendMail","All","subject","Attempt"
 "Defaults","SendMail","All","body","None"
+"Defaults","SendMail","All","bodyHTML","None"
 "Defaults","SendMail","All","attachedFiles","None"
 "Shortcuts","SendMail","All","SendMail","SendMail"
 "Shortcuts","SendMail","All","Emailing","SendMail"
