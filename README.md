@@ -31,6 +31,14 @@ The points above are given in order of importance; the most important are placed
 
 ## Examples
 
+Install the package 
+[NLPTemplateEngine.m](https://github.com/antononcube/NLP-Template-Engine/blob/main/Packages/WL/NLPTemplateEngine.m)
+with:
+
+```mathematica
+Import["https://raw.githubusercontent.com/antononcube/NLP-Template-Engine/main/Packages/WL/NLPTemplateEngine.m"]
+```
+
 ### Latent Semantic Analysis
 
 ```mathematica
