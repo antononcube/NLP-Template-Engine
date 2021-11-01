@@ -174,7 +174,7 @@ Within each workflow type 60-75% are “just” one standard workflow.
 ```mathematica
 Concretize["Templates"]["LatentSemanticAnalysis"]["WL"]
 
-(*TemplateObject[{"lsaObj=LSAMonUnit[", TemplateSlot["textData"], "] \[DoubleLongRightArrow]LSAMonMakeDocumentTermMatrix[ \"StemmingRules\" -> ", TemplateSlot["stemmingRules"], ", \"StopWords\" -> ", TemplateSlot["stopWords"], "] \[DoubleLongRightArrow]LSAMonEchoDocumentTermMatrixStatistics[\"LogBase\" -> 10] \[DoubleLongRightArrow]LSAMonApplyTermWeightFunctions[\"GlobalWeightFunction\" -> \"", TemplateSlot["globalWeightFunction"], "\", \"LocalWeightFunction\" -> \"", TemplateSlot["localWeightFunction"], "\", \"NormalizerFunction\" -> \"", TemplateSlot["normalizerFunction"], "\"] \[DoubleLongRightArrow]LSAMonExtractTopics[\"NumberOfTopics\" -> ", TemplateSlot["numberOfTopics"], ", Method -> \"", TemplateSlot["method"], "\", \"MaxSteps\" -> ", TemplateSlot["maxSteps"], ", \"MinNumberOfDocumentsPerTerm\" -> ", TemplateSlot["minNumberOfDocumentsPerTerm"], "] \[DoubleLongRightArrow]LSAMonEchoTopicsTable[\"NumberOfTerms\" -> ", TemplateSlot["topicsTableNumberOfTerms"], "] \[DoubleLongRightArrow]LSAMonEchoStatisticalThesaurus[ \"Words\" -> ", TemplateSlot["statThesaurusWords"], "];"}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]*)
+(*TemplateObject[{"lsaObj=LSAMonUnit[", TemplateSlot["textData"], "] ⟹LSAMonMakeDocumentTermMatrix[ \"StemmingRules\" -> ", TemplateSlot["stemmingRules"], ", \"StopWords\" -> ", TemplateSlot["stopWords"], "] ⟹LSAMonEchoDocumentTermMatrixStatistics[\"LogBase\" -> 10] ⟹LSAMonApplyTermWeightFunctions[\"GlobalWeightFunction\" -> \"", TemplateSlot["globalWeightFunction"], "\", \"LocalWeightFunction\" -> \"", TemplateSlot["localWeightFunction"], "\", \"NormalizerFunction\" -> \"", TemplateSlot["normalizerFunction"], "\"] ⟹LSAMonExtractTopics[\"NumberOfTopics\" -> ", TemplateSlot["numberOfTopics"], ", Method -> \"", TemplateSlot["method"], "\", \"MaxSteps\" -> ", TemplateSlot["maxSteps"], ", \"MinNumberOfDocumentsPerTerm\" -> ", TemplateSlot["minNumberOfDocumentsPerTerm"], "] ⟹LSAMonEchoTopicsTable[\"NumberOfTerms\" -> ", TemplateSlot["topicsTableNumberOfTerms"], "] ⟹LSAMonEchoStatisticalThesaurus[ \"Words\" -> ", TemplateSlot["statThesaurusWords"], "];"}, CombinerFunction -> StringJoin, InsertionFunction -> TextString]*)
 ```
 
 Let us concretize it:
@@ -185,8 +185,8 @@ Concretize["Make latent semantic analysis workflow for aAbstracts."]
 
 ```mathematica
 lsaObj = 
-   LSAMonUnit[aAbstracts]\[DoubleLongRightArrow]
-    LSAMonMakeDocumentTermMatrix["StemmingRules" -> Automatic, "StopWords" -> Automatic]\[DoubleLongRightArrow]LSAMonEchoDocumentTermMatrixStatistics["LogBase" -> 10]\[DoubleLongRightArrow]LSAMonApplyTermWeightFunctions["GlobalWeightFunction" -> "IDF", "LocalWeightFunction" -> "None", "NormalizerFunction" -> "Cosine"]\[DoubleLongRightArrow]LSAMonExtractTopics["NumberOfTopics" -> 20, Method -> "SVD", "MaxSteps" -> 16, "MinNumberOfDocumentsPerTerm" -> 20]\[DoubleLongRightArrow]LSAMonEchoTopicsTable["NumberOfTerms" -> 10]\[DoubleLongRightArrow]
+   LSAMonUnit[aAbstracts]⟹
+    LSAMonMakeDocumentTermMatrix["StemmingRules" -> Automatic, "StopWords" -> Automatic]⟹LSAMonEchoDocumentTermMatrixStatistics["LogBase" -> 10]⟹LSAMonApplyTermWeightFunctions["GlobalWeightFunction" -> "IDF", "LocalWeightFunction" -> "None", "NormalizerFunction" -> "Cosine"]⟹LSAMonExtractTopics["NumberOfTopics" -> 20, Method -> "SVD", "MaxSteps" -> 16, "MinNumberOfDocumentsPerTerm" -> 20]⟹LSAMonEchoTopicsTable["NumberOfTerms" -> 10]⟹
     LSAMonEchoStatisticalThesaurus["Words" -> {"notebook", "function", "neural"}];
 ```
 
@@ -257,7 +257,7 @@ Here we generate code for the a typical ML classification workflow, [AAp3]:
 ```mathematica
 clRes = Concretize["ClCon", clCommand]
 
-(*Hold[clObj = ClConUnit[dsTitanic]\[DoubleLongRightArrow]ClConSplitData[0.75]\[DoubleLongRightArrow]ClConEchoDataSummary\[DoubleLongRightArrow]ClConMakeClassifier["RandomForest"]\[DoubleLongRightArrow]ClConClassifierMeasurements[{"data dsTitanic"}]\[DoubleLongRightArrow]ClConEchoValue\[DoubleLongRightArrow]ClConROCPlot[{"FPR", "TPR"}];]*)
+(*Hold[clObj = ClConUnit[dsTitanic]⟹ClConSplitData[0.75]⟹ClConEchoDataSummary⟹ClConMakeClassifier["RandomForest"]⟹ClConClassifierMeasurements[{"data dsTitanic"}]⟹ClConEchoValue⟹ClConROCPlot[{"FPR", "TPR"}];]*)
 ```
 
 ```mathematica
@@ -289,7 +289,7 @@ Here we generate code for the software monad ClMon, [AAp3]:
 ```mathematica
 clRes = Concretize["ClCon", clCommand]
 
-(*Hold[clObj = ClConUnit[dsTitanic]\[DoubleLongRightArrow]ClConSplitData[0.75]\[DoubleLongRightArrow]ClConEchoDataSummary\[DoubleLongRightArrow]ClConMakeClassifier["RandomForest"]\[DoubleLongRightArrow]ClConClassifierMeasurements[{"data dsTitanic"}]\[DoubleLongRightArrow]ClConEchoValue\[DoubleLongRightArrow]ClConROCPlot[{"FPR", "TPR"}];]*)
+(*Hold[clObj = ClConUnit[dsTitanic]⟹ClConSplitData[0.75]⟹ClConEchoDataSummary⟹ClConMakeClassifier["RandomForest"]⟹ClConClassifierMeasurements[{"data dsTitanic"}]⟹ClConEchoValue⟹ClConROCPlot[{"FPR", "TPR"}];]*)
 ```
 
 Here the code generated above is evaluated:
@@ -317,7 +317,7 @@ Here we generate code for the software monad LSAMon, [AAp4]:
 ```mathematica
 lsaRes = Concretize["LSAMon", lsaCommand]
 
-(*Hold[lsaObj = LSAMonUnit[aAbstracts]\[DoubleLongRightArrow]LSAMonMakeDocumentTermMatrix["StemmingRules" -> Automatic, "StopWords" -> Automatic]\[DoubleLongRightArrow]LSAMonEchoDocumentTermMatrixStatistics["LogBase" -> 10]\[DoubleLongRightArrow]LSAMonApplyTermWeightFunctions["GlobalWeightFunction" -> "IDF", "LocalWeightFunction" -> "None","NormalizerFunction" -> "Cosine"]\[DoubleLongRightArrow]LSAMonExtractTopics["NumberOfTopics" -> 20, Method -> "NNMF", "MaxSteps" -> 16, "MinNumberOfDocumentsPerTerm" -> 20]\[DoubleLongRightArrow]LSAMonEchoTopicsTable["NumberOfTerms" -> 10]\[DoubleLongRightArrow]LSAMonEchoStatisticalThesaurus["Words" -> {"neural", "function", "notebook"}];]*)
+(*Hold[lsaObj = LSAMonUnit[aAbstracts]⟹LSAMonMakeDocumentTermMatrix["StemmingRules" -> Automatic, "StopWords" -> Automatic]⟹LSAMonEchoDocumentTermMatrixStatistics["LogBase" -> 10]⟹LSAMonApplyTermWeightFunctions["GlobalWeightFunction" -> "IDF", "LocalWeightFunction" -> "None","NormalizerFunction" -> "Cosine"]⟹LSAMonExtractTopics["NumberOfTopics" -> 20, Method -> "NNMF", "MaxSteps" -> 16, "MinNumberOfDocumentsPerTerm" -> 20]⟹LSAMonEchoTopicsTable["NumberOfTerms" -> 10]⟹LSAMonEchoStatisticalThesaurus["Words" -> {"neural", "function", "notebook"}];]*)
 ```
 
 Here the code generated above is evaluated:
@@ -349,7 +349,7 @@ Here we generate code for the a typical statistical regression workflow based on
 ```mathematica
 qrRes = Concretize["QRMon", qrCommand, "TargetLanguage" -> "WL"]
 
-(*Hold[qrObj = QRMonUnit[dfTemperatureData]\[DoubleLongRightArrow]QRMonEchoDataSummary[]\[DoubleLongRightArrow]QRMonQuantileRegression[22, {0.1, 0.5, 0.7}, InterpolationOrder -> 3]\[DoubleLongRightArrow]QRMonPlot["DateListPlot" -> True, PlotTheme -> "Detailed"]\[DoubleLongRightArrow]QRMonErrorPlots["RelativeErrors" -> False, "DateListPlot" -> True, PlotTheme -> "Detailed"];]*)
+(*Hold[qrObj = QRMonUnit[dfTemperatureData]⟹QRMonEchoDataSummary[]⟹QRMonQuantileRegression[22, {0.1, 0.5, 0.7}, InterpolationOrder -> 3]⟹QRMonPlot["DateListPlot" -> True, PlotTheme -> "Detailed"]⟹QRMonErrorPlots["RelativeErrors" -> False, "DateListPlot" -> True, PlotTheme -> "Detailed"];]*)
 ```
 
 Here we evaluate the generated code:
@@ -502,13 +502,13 @@ Concretize["Introspection", "Show me an example of Quantile Regression spec"]
 ```mathematica
 Concretize["Introspection", "Show me an example of recommendations spec"]
 
-(*"smrObj=SMRMonUnit[]\[DoubleLongRightArrow]SMRMonCreate[None]\[DoubleLongRightArrow]SMRMonRecommendByProfile[None, 12]\[DoubleLongRightArrow]SMRMonJoinAcross[None]\[DoubleLongRightArrow]SMRMonEchoValue[];"*)
+(*"smrObj=SMRMonUnit[]⟹SMRMonCreate[None]⟹SMRMonRecommendByProfile[None, 12]⟹SMRMonJoinAcross[None]⟹SMRMonEchoValue[];"*)
 ```
 
 ```mathematica
 Concretize["Introspection", "Show latent semantic analysis workflow template"]
 
-(*"lsaObj=LSAMonUnit[None] \[DoubleLongRightArrow]LSAMonMakeDocumentTermMatrix[ \"StemmingRules\" -> Automatic, \"StopWords\" -> Automatic] \[DoubleLongRightArrow]LSAMonEchoDocumentTermMatrixStatistics[\"LogBase\" -> 10] \[DoubleLongRightArrow]LSAMonApplyTermWeightFunctions[\"GlobalWeightFunction\" -> \"IDF\", \"LocalWeightFunction\" -> \"None\", \"NormalizerFunction\" -> \"Cosine\"] \[DoubleLongRightArrow]LSAMonExtractTopics[\"NumberOfTopics\" -> 40, Method -> \"SVD\", \"MaxSteps\" -> 16, \"MinNumberOfDocumentsPerTerm\" -> 20] \[DoubleLongRightArrow]LSAMonEchoTopicsTable[\"NumberOfTerms\" -> 10] \[DoubleLongRightArrow]LSAMonEchoStatisticalThesaurus[ \"Words\" -> None];"*)
+(*"lsaObj=LSAMonUnit[None] ⟹LSAMonMakeDocumentTermMatrix[ \"StemmingRules\" -> Automatic, \"StopWords\" -> Automatic] ⟹LSAMonEchoDocumentTermMatrixStatistics[\"LogBase\" -> 10] ⟹LSAMonApplyTermWeightFunctions[\"GlobalWeightFunction\" -> \"IDF\", \"LocalWeightFunction\" -> \"None\", \"NormalizerFunction\" -> \"Cosine\"] ⟹LSAMonExtractTopics[\"NumberOfTopics\" -> 40, Method -> \"SVD\", \"MaxSteps\" -> 16, \"MinNumberOfDocumentsPerTerm\" -> 20] ⟹LSAMonEchoTopicsTable[\"NumberOfTerms\" -> 10] ⟹LSAMonEchoStatisticalThesaurus[ \"Words\" -> None];"*)
 ```
 
 ```mathematica
@@ -533,7 +533,7 @@ FindTextualAnswer[Concretize`Private`txtSQASDescription, "What is the template f
 ```mathematica
 Concretize["Introspection", "What is the template for recommendations"]
 
-(*"smrObj=SMRMonUnit[]\[DoubleLongRightArrow]SMRMonCreate[None]\[DoubleLongRightArrow]SMRMonRecommendByProfile[None, 12]\[DoubleLongRightArrow]SMRMonJoinAcross[None]\[DoubleLongRightArrow]SMRMonEchoValue[];"*)
+(*"smrObj=SMRMonUnit[]⟹SMRMonCreate[None]⟹SMRMonRecommendByProfile[None, 12]⟹SMRMonJoinAcross[None]⟹SMRMonEchoValue[];"*)
 ```
 
 ---
