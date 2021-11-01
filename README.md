@@ -179,3 +179,9 @@ Concretize["SendMail", "Send email to joedoe@gmail.com with content RandomReal[3
 (2018),
 [Wolfram Language function](https://reference.wolfram.com), (updated 2020).
 
+### Videos
+
+[AAv1] Anton Antonov,
+["NLP Template Engine, Part 1"](https://youtu.be/a6PvmZnvF9I),
+(2021),
+[Simplified Machine Learning Workflows at YouTube](https://www.youtube.com/playlist?list=PLke9UbqjOSOi1fc0NkJTdK767cL9XHJF0).
