@@ -1,5 +1,3 @@
----
-
 # Natural Language Processing Template Engine
 
 **Part 1**
