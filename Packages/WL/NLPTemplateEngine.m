@@ -287,7 +287,7 @@ GetAnswers[workflowTypeArg_String, command_String, nAnswers_Integer : 4, opts : 
 
                       ToExpression /@ Select[StringTrim[StringSplit[TakeLargestKey[v, 1], {",", "and"}]], StringLength[#] > 0&],
 
-                      "_?NumericQ" | "_Integer",
+                      "_?NumericQ" | "_Integer" | "_Symbol",
                       ToExpression[TakeLargestKey[v, 1]],
 
                       "_?BooleanQ" | "(True|False)" | "(False|True)",
