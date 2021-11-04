@@ -288,7 +288,7 @@ GetAnswers[workflowTypeArg_String, command_String, nAnswers_Integer : 4, opts : 
                       ToExpression /@ Select[StringTrim[StringSplit[TakeLargestKey[v, 1], {",", "and"}]], StringLength[#] > 0&],
 
                       "_?NumericQ" | "_Integer" | "_Symbol",
-                      ToExpression[TakeLargestKey[v, 1]],
+                      ToExpression[First @ Select[StringTrim[StringSplit[TakeLargestKey[v, 1], {",", "and", Whitespace}]], StringLength[#] > 0&]],
 
                       "_?BooleanQ" | "(True|False)" | "(False|True)",
                       MemberQ[
@@ -566,12 +566,12 @@ ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Questions" ] :=
       dsQuery = dsTESpecs[Select[#DataType == dataType&]];
       If[ Length[dsQuery] == 0, Return[<||>]];
 
-      dsQuery = dsQuery[ All, If[ #Key == "ContextWordsToRemove", Append[#,"Value" -> ToExpression[#Value]], #]&];
+      dsQuery = dsQuery[ All, If[ #Key == "ContextWordsToRemove", Append[#, "Value" -> ToExpression[#Value]], #]&];
       dsQuery = Normal[dsQuery[Values]];
       aRes = ResourceFunction["AssociationKeyDeflatten"][ Map[ Most[#] -> Last[#]&, dsQuery] ];
 
       aRes[dataType]
-   ];
+    ];
 
 ConvertCSVDataForType[ dsTESpecs_Dataset, dataType : "Templates" ] :=
     Block[{dsQuery, aRes},
