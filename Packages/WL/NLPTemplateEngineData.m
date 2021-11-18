@@ -270,17 +270,16 @@ aPythonTemplates = <|
 
   "RandomTabularDataset" ->
       StringTemplate[
-        "print(\"Example API -- no actual implementation !!!\")
-            RandomDataFrame(" <>
-            "nrow = `nrow`, ncol = `ncol`, " <>
-            "columnNamesGenerator = `columnNamesGenerator`, " <>
+        "random_data_frame(" <>
+            "n_rows = `nrow`, columns_spec = `ncol`, " <>
+            "column_names_generator = `columnNamesGenerator`, " <>
             "form =  \"`form`\", " <>
-            "maxNumberOfValues = `maxNumberOfValues`, " <>
-            "minNumberOfValues = `minNumberOfValues`, " <>
-            "rowNamesQ = `rowKeys`" <>
+            "max_number_of_values = `maxNumberOfValues`, " <>
+            "min_number_of_values = `minNumberOfValues`, " <>
+            "row_names = `rowKeys`" <>
             ")"],
 
-  "Recommendations" ->
+  "RecommendationsImperative" ->
       (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
           "print(\"Example API -- no actual implementation !!!\")
           smrObj = SMRMonUnit()
@@ -288,6 +287,20 @@ aPythonTemplates = <|
           smrObj = SMRMonRecommendByProfile(smrObj, profile = `prof`, nrecs = `nrecs`)
           smrObj = SMRMonJoinAcross(smrObj, data = `dataset`)
           SMRMonEchoValue(smrObj)",
+
+  "Recommendations" ->
+      (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
+          "smrObj = (SparseMatrixRecommender()
+                      .create_from_wide_form(
+                                 data = `dataset`,
+                                 item_column_name=\"id\",
+                                 columns=None,
+                                 add_tag_types_to_column_names=True,
+                                 tag_value_separator=\":\")
+                      .apply_term_weight_functions(\"IDF\", \"None\", \"Cosine\")
+                      .recommend_by_profile(profile=`prof`, nrecs=`nrecs`)
+                      .join_across(data=`dataset`, on=\"id\")
+                      .echo_value())",
 
   "NeuralNetworkCreation" ->
       StringTemplate["\"Not implemented\""]
