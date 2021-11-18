@@ -291,16 +291,11 @@ aPythonTemplates = <|
   "Recommendations" ->
       (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
           "smrObj = (SparseMatrixRecommender()
-                      .create_from_wide_form(
-                                 data = `dataset`,
-                                 item_column_name=\"id\",
-                                 columns=None,
-                                 add_tag_types_to_column_names=True,
-                                 tag_value_separator=\":\")
-                      .apply_term_weight_functions(\"IDF\", \"None\", \"Cosine\")
-                      .recommend_by_profile(profile=`prof`, nrecs=`nrecs`)
-                      .join_across(data=`dataset`, on=\"id\")
-                      .echo_value())",
+              .create_from_wide_form(data = `dataset`, item_column_name=\"id\", columns=None, add_tag_types_to_column_names=True, tag_value_separator=\":\")
+              .apply_term_weight_functions(\"IDF\", \"None\", \"Cosine\")
+              .recommend_by_profile(profile=`prof`, nrecs=`nrecs`)
+              .join_across(data=`dataset`, on=\"id\")
+              .echo_value())",
 
   "NeuralNetworkCreation" ->
       StringTemplate["\"Not implemented\""]
