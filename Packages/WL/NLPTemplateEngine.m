@@ -432,6 +432,16 @@ Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
               }];
         codeExpr = "parse( text = '" <> code <> "')",
 
+        lang == "Python",
+        code =
+            StringReplace[
+              code,
+              {
+                WordBoundary ~~ "Automatic" ~~ WordBoundary -> "None",
+                "{" ~~ x : (Except[Characters["{}"]]..) ~~ "}" :> "[" <> x <> "]"
+              }];
+        codeExpr = code,
+
         True,
         codeExpr = code
       ];
