@@ -1,0 +1,33 @@
+"DataType","WorkflowType","Group","Key","Value"
+"Questions","RandomMandalaCollage","How many mandalas","TypePattern","_Integer"
+"Questions","RandomMandalaCollage","How many mandalas","Threshold",0.45
+"Questions","RandomMandalaCollage","How many mandalas","Parameter","n"
+"Questions","RandomMandalaCollage","How many mandalas","ContextWordsToRemove","{""mandalas"", ""many""}"
+"Questions","RandomMandalaCollage","How many random mandalas","TypePattern","_Integer"
+"Questions","RandomMandalaCollage","How many random mandalas","Threshold",0.45
+"Questions","RandomMandalaCollage","How many random mandalas","Parameter","n"
+"Questions","RandomMandalaCollage","How many random mandalas","ContextWordsToRemove","{""mandalas"", ""many"", ""random""}"
+"Questions","RandomMandalaCollage","What is the face opacity","TypePattern","_Real"
+"Questions","RandomMandalaCollage","What is the face opacity","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the face opacity","Parameter","faceOpacity"
+"Questions","RandomMandalaCollage","What is the face opacity","ContextWordsToRemove","{""face"", ""opacity""}"
+"Questions","RandomMandalaCollage","What is the edge opacity","TypePattern","_Real"
+"Questions","RandomMandalaCollage","What is the edge opacity","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the edge opacity","Parameter","edgeOpacity"
+"Questions","RandomMandalaCollage","What is the edge opacity","ContextWordsToRemove","{""edge"", ""opacity""}"
+"Questions","RandomMandalaCollage","What is the color palette","TypePattern","_String"
+"Questions","RandomMandalaCollage","What is the color palette","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the color palette","Parameter","colorFunction"
+"Questions","RandomMandalaCollage","What is the color palette","ContextWordsToRemove","{""color"", ""palette""}"
+"Questions","RandomMandalaCollage","What is the color function","TypePattern","_String"
+"Questions","RandomMandalaCollage","What is the color function","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the color function","Parameter","colorFunction"
+"Questions","RandomMandalaCollage","What is the color function","ContextWordsToRemove","{""color"", ""function""}"
+"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[]"
+"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[<|""n"" -> `n`, ""faceOpacity"" -> `faceOpacity`, ""edgeOpacity"" -> `edgeOpacity`, ""edgeColor"" -> `edgeColor`, ""colorFunction"" -> `colorFunction`|>, Background -> GrayLevel[0], ImageCollage -> False]"
+"Defaults","RandomMandalaCollage","All","n","12"
+"Defaults","RandomMandalaCollage","All","faceOpacity","0,7"
+"Defaults","RandomMandalaCollage","All","edgeOpacity","-1"
+"Defaults","RandomMandalaCollage","All","edgeColor","LightBlue"
+"Defaults","RandomMandalaCollage","All","colorFunction",""Rainbow""
+"Shortcuts","RandomMandalaCollage","All","RandomMandalas","RandomMandalaCollage"
