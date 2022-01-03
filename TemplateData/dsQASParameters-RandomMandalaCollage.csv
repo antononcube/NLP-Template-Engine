@@ -23,11 +23,10 @@
 "Questions","RandomMandalaCollage","What is the color function","Threshold",0.45
 "Questions","RandomMandalaCollage","What is the color function","Parameter","colorFunction"
 "Questions","RandomMandalaCollage","What is the color function","ContextWordsToRemove","{""color"", ""function""}"
-"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[]"
-"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[<|""n"" -> `n`, ""faceOpacity"" -> `faceOpacity`, ""edgeOpacity"" -> `edgeOpacity`, ""edgeColor"" -> `edgeColor`, ""colorFunction"" -> `colorFunction`|>, Background -> GrayLevel[0], ImageCollage -> False]"
+"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[<|""n"" ->`n`,""faceOpacity""->`faceOpacity`,""edgeOpacity""->`edgeOpacity`,""edgeColor""->`edgeColor`,""colorFunction""->`colorFunction`|>,Background->Black,ImageCollage->False]"
 "Defaults","RandomMandalaCollage","All","n","12"
 "Defaults","RandomMandalaCollage","All","faceOpacity","0,7"
 "Defaults","RandomMandalaCollage","All","edgeOpacity","-1"
 "Defaults","RandomMandalaCollage","All","edgeColor","LightBlue"
-"Defaults","RandomMandalaCollage","All","colorFunction",""Rainbow""
+"Defaults","RandomMandalaCollage","All","colorFunction","Rainbow"
 "Shortcuts","RandomMandalaCollage","All","RandomMandalas","RandomMandalaCollage"
