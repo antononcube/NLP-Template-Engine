@@ -12,9 +12,13 @@
 "Questions","RandomMandalaCollage","What is the face opacity","Parameter","faceOpacity"
 "Questions","RandomMandalaCollage","What is the face opacity","ContextWordsToRemove","{""face"", ""opacity""}"
 "Questions","RandomMandalaCollage","What is the edge opacity","TypePattern","_Real"
-"Questions","RandomMandalaCollage","What is the edge opacity","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the edge opacity","Threshold",0.65
 "Questions","RandomMandalaCollage","What is the edge opacity","Parameter","edgeOpacity"
 "Questions","RandomMandalaCollage","What is the edge opacity","ContextWordsToRemove","{""edge"", ""opacity""}"
+"Questions","RandomMandalaCollage","What is the edge color","TypePattern","_String"
+"Questions","RandomMandalaCollage","What is the edge color","Threshold",0.45
+"Questions","RandomMandalaCollage","What is the edge color","Parameter","edgeColor"
+"Questions","RandomMandalaCollage","What is the edge color","ContextWordsToRemove","{""edge"", ""color""}"
 "Questions","RandomMandalaCollage","What is the color palette","TypePattern","_String"
 "Questions","RandomMandalaCollage","What is the color palette","Threshold",0.45
 "Questions","RandomMandalaCollage","What is the color palette","Parameter","colorFunction"
@@ -23,10 +27,14 @@
 "Questions","RandomMandalaCollage","What is the color function","Threshold",0.45
 "Questions","RandomMandalaCollage","What is the color function","Parameter","colorFunction"
 "Questions","RandomMandalaCollage","What is the color function","ContextWordsToRemove","{""color"", ""function""}"
-"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[<|""n"" ->`n`,""faceOpacity""->`faceOpacity`,""edgeOpacity""->`edgeOpacity`,""edgeColor""->`edgeColor`,""colorFunction""->`colorFunction`|>,Background->Black,ImageCollage->False]"
+"Questions","RandomMandalaCollage","Which is the coloring style","TypePattern","_String"
+"Questions","RandomMandalaCollage","Which is the coloring style","Threshold",0.45
+"Questions","RandomMandalaCollage","Which is the coloring style","Parameter","colorFunction"
+"Questions","RandomMandalaCollage","Which is the coloring style","ContextWordsToRemove","{""color"",""coloring"",""style""}"
+"Templates","RandomMandalaCollage","WL","Template","RandomMandalaCollage[<|""n"" ->`n`,""faceOpacity""->`faceOpacity`,""edgeOpacity""->`edgeOpacity`,""edgeColor""->`edgeColor`,""colorFunction""->""`colorFunction`""|>,Background->Black,ImageCollage->False]"
 "Defaults","RandomMandalaCollage","All","n","12"
-"Defaults","RandomMandalaCollage","All","faceOpacity","0,7"
+"Defaults","RandomMandalaCollage","All","faceOpacity","0.7"
 "Defaults","RandomMandalaCollage","All","edgeOpacity","-1"
 "Defaults","RandomMandalaCollage","All","edgeColor","LightBlue"
-"Defaults","RandomMandalaCollage","All","colorFunction","Rainbow"
+"Defaults","RandomMandalaCollage","All","colorFunction","""Rainbow"""
 "Shortcuts","RandomMandalaCollage","All","RandomMandalas","RandomMandalaCollage"
