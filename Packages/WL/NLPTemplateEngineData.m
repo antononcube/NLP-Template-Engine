@@ -303,10 +303,55 @@ aPythonTemplates = <|
 
 
 (***********************************************************)
+(* Raku templates                                        *)
+(***********************************************************)
+
+aRakuTemplates = <|
+  "QuantileRegression" -> StringTemplate["\"Not implemented\""],
+
+  "QRMon" -> StringTemplate["\"Not implemented\""],
+
+  "LatentSemanticAnalysis" -> StringTemplate["\"Not implemented\""],
+
+  "Classification" -> StringTemplate["\"Not implemented\""],
+
+  "ClCon" -> StringTemplate["\"Not implemented\""],
+  (* random-tabular-dataset(10, 3, max-number-of-values => 20)*)
+  "RandomTabularDataset" ->
+      StringTemplate[
+        "random-tabular-dataset(" <>
+            "`nrow`, `ncol`, " <>
+            "column-names-generator => `columnNamesGenerator`, " <>
+            "form =>  \"`form`\", " <>
+            "max-number-of-values => `maxNumberOfValues`, " <>
+            "min-number-of-values => `minNumberOfValues`, " <>
+            "row-names => `rowKeys`" <>
+            ")"],
+
+  "RecommendationsImperative" ->
+      (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
+          "my ML::StreamsBlendingRecommender::CoreSBR $sbrObj .= new;
+          $sbrObj.makeTagInverseIndexesFromWideForm(`dataset`);
+          $sbrObj.normalizePerTagType();
+          my $recs = $sbrObj.recommendByProfile( `prof`, `nrecs`):!object;
+          silently { $recsTbl = $sbrObj.joinAcross($recs3, @metadata, by=>Whatever):!object; }
+          say to-pretty-table($recsTbl)",
+
+  "Recommendations" ->
+      (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
+          "my ML::StreamsBlendingRecommender::CoreSBR $sbrObj .= new;
+          $sbrObj.makeTagInverseIndexesFromWideForm(`dataset`).normalizePerTagType().recommendByProfile( `prof`, `nrecs`).joinAcross($recs3, `dataset`);
+          say to-pretty-table($sbrObj.takeValue)",
+
+  "NeuralNetworkCreation" ->
+      StringTemplate["\"Not implemented\""]
+|>;
+
+(***********************************************************)
 (* All templates                                           *)
 (***********************************************************)
 
-aTemplatesOrig = <| "Python" -> aPythonTemplates, "R" -> aRTemplates, "WL" -> aWLTemplates |>;
+aTemplatesOrig = <| "Python" -> aPythonTemplates, "R" -> aRTemplates, "Raku" -> aRakuTemplates, "WL" -> aWLTemplates |>;
 
 aTemplates = Flatten @ Map[ Function[{key}, KeyValueMap[ {#1, key} -> #2 &, aTemplatesOrig[key] ]], Keys[aTemplatesOrig] ];
 aTemplates = ResourceFunction["AssociationKeyDeflatten"][aTemplates];
