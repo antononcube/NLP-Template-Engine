@@ -442,6 +442,16 @@ Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
               }];
         codeExpr = code,
 
+        lang == "Raku",
+        code =
+            StringReplace[
+              code,
+              {
+                WordBoundary ~~ "Automatic" ~~ WordBoundary -> "Whatever",
+                "{" ~~ x : (Except[Characters["{}"]]..) ~~ "}" :> "[" <> x <> "]"
+              }];
+        codeExpr = code,
+
         True,
         codeExpr = code
       ];
