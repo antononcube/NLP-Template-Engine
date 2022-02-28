@@ -253,7 +253,7 @@ aPythonTemplates = <|
           QRMonPlot(qrObj, datePlotQ = `dateListPlotQ` )
           QRMonErrorsPlot(qrObj, relativeErrors = `relativeErrorsQ`, datePlotQ = `dateListPlotQ`)",
 
-  "LatentSemanticAnalysis" ->
+  "LatentSemanticAnalysisImperative" ->
       (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
           "print(\"Example API -- no actual implementation !!!\")
           lsaObj = LSAMonUnit(`textData`)
@@ -263,6 +263,15 @@ aPythonTemplates = <|
           lsaObj = LSAMonExtractTopics(lsaObj, numberOfTopics = `numberOfTopics`, method = \"`method`\", maxSteps = `maxSteps`, minNumberOfDocumentsPerTerm = `minNumberOfDocumentsPerTerm`)
           LSAMonEchoTopicsTable(lsaObj, numberOfTerms = `topicsTableNumberOfTerms`, wideFormQ = TRUE)
           LSAMonEchoStatisticalThesaurus(lsaObj, words = `statThesaurusWords`)",
+
+  "LatentSemanticAnalysis" ->
+      (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
+          "lsaObj = (LatentSemanticAnalyzer()
+          .make_document_term_matrix(docs=`textData`, stop_words=`stopWords`, stemming_rules=`stemmingRules`,min_length=3)
+          .apply_term_weight_functions(global_weight_func='`globalWeightFunction`', local_weight_func='`localWeightFunction`',normalizer_func='`normalizerFunction`')
+          .extract_topics(number_of_topics=`numberOfTopics`, min_number_of_documents_per_term=`minNumberOfDocumentsPerTerm`, method='`method`')
+          .echo_topics_interpretation(number_of_terms=`topicsTableNumberOfTerms`, wide_form=True)
+          .echo_statistical_thesaurus(terms=stemmerObj.stemWords(`statThesaurusWords`), wide_form=True, number_of_nearest_neighbors=12, method='cosine', echo_function=lambda x: print(x.to_string())))",
 
   "Classification" -> StringTemplate["\"Not implemented\""],
 
