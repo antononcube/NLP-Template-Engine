@@ -343,13 +343,13 @@ aRakuTemplates = <|
           $sbrObj.makeTagInverseIndexesFromWideForm(`dataset`);
           $sbrObj.normalizePerTagType();
           my $recs = $sbrObj.recommendByProfile( `prof`, `nrecs`):!object;
-          silently { $recsTbl = $sbrObj.joinAcross($recs3, @metadata, by=>Whatever):!object; }
+          silently { $recsTbl = $sbrObj.joinAcross($recs, @metadata, by=>Whatever):!object; }
           say to-pretty-table($recsTbl)",
 
   "Recommendations" ->
       (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
           "my ML::StreamsBlendingRecommender::CoreSBR $sbrObj .= new;
-          $sbrObj.makeTagInverseIndexesFromWideForm(`dataset`).normalizePerTagType().recommendByProfile( `prof`, `nrecs`).joinAcross($recs3, `dataset`);
+          $sbrObj.makeTagInverseIndexesFromWideForm(`dataset`).normalizePerTagType().recommendByProfile( `prof`, `nrecs`).joinAcross(`dataset`);
           say to-pretty-table($sbrObj.takeValue)",
 
   "NeuralNetworkCreation" ->
