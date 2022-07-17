@@ -312,7 +312,7 @@ aPythonTemplates = <|
 
 
 (***********************************************************)
-(* Raku templates                                        *)
+(* Raku templates                                          *)
 (***********************************************************)
 
 aRakuTemplates = <|
@@ -356,11 +356,46 @@ aRakuTemplates = <|
       StringTemplate["\"Not implemented\""]
 |>;
 
+
+(***********************************************************)
+(* Swift templates                                         *)
+(***********************************************************)
+
+aSwiftTemplates = <|
+  "QuantileRegression" -> StringTemplate["\"Not implemented\""],
+
+  "QRMon" -> StringTemplate["\"Not implemented\""],
+
+  "LatentSemanticAnalysis" -> StringTemplate["\"Not implemented\""],
+
+  "Classification" -> StringTemplate["\"Not implemented\""],
+
+  "ClCon" -> StringTemplate["\"Not implemented\""],
+  (* random-tabular-dataset(10, 3, max-number-of-values => 20)*)
+  "RandomTabularDataset" -> StringTemplate["\"Not implemented\""],
+
+  "RecommendationsImperative" ->
+      (StringTemplate @ StringReplace[#, "\n" ~~ (WhitespaceCharacter..) -> "\n"]&) @
+          "let sbrObj : CoreSBR = CoreSBR()
+          sbrObj.makeTagInverseIndexesFromWideForm(`dataset`)
+          sbrObj.normalizePerTagType()
+          let recs = sbrObj.recommendByProfile(`prof`, `nrecs`)
+          let recsTbl = sbrObj.joinAcross(recs, metadata, by: \"ID\")
+          print(recsTbl)",
+
+  "Recommendations" -> StringTemplate["\"Not implemented\""],
+
+  "NeuralNetworkCreation" ->
+      StringTemplate["\"Not implemented\""]
+|>;
+
+aSwiftTemplates = Join[aSwiftTemplates, <| "Recommendations" -> aSwiftTemplates["RecommendationsImperative"]|> ];
+
 (***********************************************************)
 (* All templates                                           *)
 (***********************************************************)
 
-aTemplatesOrig = <| "Python" -> aPythonTemplates, "R" -> aRTemplates, "Raku" -> aRakuTemplates, "WL" -> aWLTemplates |>;
+aTemplatesOrig = <| "Python" -> aPythonTemplates, "R" -> aRTemplates, "Raku" -> aRakuTemplates, "Swift" -> aSwiftTemplates, "WL" -> aWLTemplates |>;
 
 aTemplates = Flatten @ Map[ Function[{key}, KeyValueMap[ {#1, key} -> #2 &, aTemplatesOrig[key] ]], Keys[aTemplatesOrig] ];
 aTemplates = ResourceFunction["AssociationKeyDeflatten"][aTemplates];
