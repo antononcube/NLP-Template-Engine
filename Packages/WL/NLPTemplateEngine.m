@@ -326,7 +326,11 @@ SyntaxInformation[Concretize] = {"ArgumentsPattern" -> {_, _., OptionsPattern[]}
 Options[Concretize] =
     Join[
       Options[GetAnswers],
-      {"TargetLanguage" -> "WL", "AvoidMonads" -> False, "AssociationResult" -> False, "UserID" -> None}
+      {"TargetLanguage" -> "WL",
+        "AvoidMonads" -> False,
+        "AssociationResult" -> False,
+        "UserID" -> None,
+        "CopyToClipboard" -> True }
     ];
 
 Concretize::tlang = "The value of the option \"TargetLanguage\" is expected to be one of `1`.";
@@ -374,7 +378,7 @@ Concretize[cf_ClassifierFunction, command_String, opts : OptionsPattern[]] :=
 Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
     Block[{workflowType = workflowTypeArg,
       aQuestions, aTemplates, aDefaults, aShortcuts,
-      lsKnownLanguages, userID, lang, aRes, code, codeExpr},
+      lsKnownLanguages, userID, lang, cpcbQ, aRes, code, codeExpr, res},
 
       {aQuestions, aTemplates, aDefaults, aShortcuts} = Values @ KeyTake[ Concretize["Data"], {"Questions", "Templates", "Defaults", "Shortcuts"}];
 
@@ -406,6 +410,10 @@ Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
         lang = "WL"
       ];
 
+      (*CopyToClipboard*)
+      cpcbQ = TrueQ[OptionValue[Concretize, "CopyToClipboard"]];
+
+      (*Translation*)
       workflowType = workflowType /. aShortcuts;
 
       aRes = GetAnswers[workflowType, command, FilterRules[{opts}, Options[GetAnswers]]];
@@ -456,22 +464,27 @@ Concretize[workflowTypeArg_String, command_String, opts : OptionsPattern[]] :=
         codeExpr = code
       ];
 
-      If[ TrueQ[OptionValue[Concretize, "AssociationResult"]],
-        <|
-          "CODE" -> code,
-          "USERID" -> userID,
-          "DSLTARGET" -> lang <> "::" <> workflowType,
-          "DSL" -> workflowType,
-          "DSLFUNCTION" -> With[{wf = workflowType, l = lang, am = TrueQ[OptionValue[Concretize, "AvoidMonads"]]},
-            ToString[Concretize[wf, #,
-              "TargetLanguage" -> l,
-              "AvoidMonads" -> am,
-              "AssociationResult" -> True]&]
-          ]
-        |>,
-        (*ELSE*)
-        codeExpr
-      ]
+      res =
+          If[ TrueQ[OptionValue[Concretize, "AssociationResult"]],
+            <|
+              "CODE" -> code,
+              "USERID" -> userID,
+              "DSLTARGET" -> lang <> "::" <> workflowType,
+              "DSL" -> workflowType,
+              "DSLFUNCTION" -> With[{wf = workflowType, l = lang, am = TrueQ[OptionValue[Concretize, "AvoidMonads"]]},
+                ToString[Concretize[wf, #,
+                  "TargetLanguage" -> l,
+                  "AvoidMonads" -> am,
+                  "AssociationResult" -> True]&]
+              ]
+            |>,
+            (*ELSE*)
+            codeExpr
+          ];
+
+      If[cpcbQ, CopyToClipboard[res]];
+
+      res
     ];
 
 Concretize[___] :=
